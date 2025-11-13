@@ -1,0 +1,2386 @@
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.One_Sec_Handler,"ax",%progbits
+  20              		.align	2
+  21              		.global	One_Sec_Handler
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	One_Sec_Handler, %function
+  25              	One_Sec_Handler:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** #include "stdio.h"
+  14:main.c        **** 
+  15:main.c        **** #define READY 0
+  16:main.c        **** #define RUNNING 1
+  17:main.c        **** #define END 2
+  18:main.c        **** #define TARGETCOUNT 3
+  19:main.c        **** #define _OR ||
+  20:main.c        **** #define EEPROM_ADDR 100
+  21:main.c        **** 
+  22:main.c        **** void ActivateTarget(int id);
+  23:main.c        **** 
+  24:main.c        **** volatile int state;
+  25:main.c        **** volatile int time = 0;
+  26:main.c        **** volatile int timeout_flag = 0;
+  27:main.c        **** volatile int points = 0;
+  28:main.c        **** volatile int finished = 0;
+  29:main.c        **** int active_target = -1;
+  30:main.c        **** 
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 2
+
+
+  31:main.c        **** CY_ISR(One_Sec_Handler){
+  28              		.loc 1 31 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 32
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 00B5     		push	{lr}
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 14, -4
+  35 0002 89B0     		sub	sp, sp, #36
+  36              		.cfi_def_cfa_offset 40
+  32:main.c        ****     time--;
+  37              		.loc 1 32 0
+  38 0004 084B     		ldr	r3, .L3
+  39 0006 1A68     		ldr	r2, [r3]
+  40 0008 013A     		subs	r2, r2, #1
+  41 000a 1A60     		str	r2, [r3]
+  33:main.c        ****     char message[32];
+  34:main.c        ****     sprintf(message, "Time: %d, Score: %d\r\n", time, points);  //Format and print data into a stri
+  42              		.loc 1 34 0
+  43 000c 1A68     		ldr	r2, [r3]
+  44 000e 5B68     		ldr	r3, [r3, #4]
+  45 0010 0649     		ldr	r1, .L3+4
+  46 0012 6846     		mov	r0, sp
+  47 0014 FFF7FEFF 		bl	sprintf
+  48              	.LVL0:
+  35:main.c        ****     UART_BT_PutString(message);                                 //Print to UART
+  49              		.loc 1 35 0
+  50 0018 6846     		mov	r0, sp
+  51 001a FFF7FEFF 		bl	UART_BT_PutString
+  52              	.LVL1:
+  36:main.c        ****     One_Sec_Timer_ReadStatusRegister();                         //Clear interrupt source
+  53              		.loc 1 36 0
+  54 001e FFF7FEFF 		bl	One_Sec_Timer_ReadStatusRegister
+  55              	.LVL2:
+  37:main.c        **** }
+  56              		.loc 1 37 0
+  57 0022 09B0     		add	sp, sp, #36
+  58              		.cfi_def_cfa_offset 4
+  59              		@ sp needed
+  60 0024 5DF804FB 		ldr	pc, [sp], #4
+  61              	.L4:
+  62              		.align	2
+  63              	.L3:
+  64 0028 00000000 		.word	.LANCHOR0
+  65 002c 00000000 		.word	.LC0
+  66              		.cfi_endproc
+  67              	.LFE64:
+  68              		.size	One_Sec_Handler, .-One_Sec_Handler
+  69              		.section	.text.ActivateTarget,"ax",%progbits
+  70              		.align	2
+  71              		.global	ActivateTarget
+  72              		.thumb
+  73              		.thumb_func
+  74              		.type	ActivateTarget, %function
+  75              	ActivateTarget:
+  76              	.LFB66:
+  38:main.c        **** 
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 3
+
+
+  39:main.c        **** //When the debounce timer is finished, it signals end of timeout
+  40:main.c        **** CY_ISR(Button_Timeout_Handler){
+  41:main.c        ****     timeout_flag = 0;                                           //No timeout
+  42:main.c        ****     points++;
+  43:main.c        ****     UART_BT_PutString("hit\r\n");                               //Print "hit" to UART
+  44:main.c        ****     Debounce_Timer_ReadStatusRegister();                        //Clear interrupt source
+  45:main.c        ****     Debounce_Timer_Stop();                                      //Stop the timer
+  46:main.c        ****     int target = active_target;
+  47:main.c        ****     if(active_target >= 3 ){
+  48:main.c        ****         target = 1;
+  49:main.c        ****     } else {
+  50:main.c        ****         target++;
+  51:main.c        ****     }
+  52:main.c        ****     ActivateTarget(target);
+  53:main.c        **** }
+  54:main.c        **** 
+  55:main.c        **** //Activate a given target
+  56:main.c        **** void ActivateTarget(int id){
+  77              		.loc 1 56 0
+  78              		.cfi_startproc
+  79              		@ args = 0, pretend = 0, frame = 0
+  80              		@ frame_needed = 0, uses_anonymous_args = 0
+  81              	.LVL3:
+  82 0000 10B5     		push	{r4, lr}
+  83              		.cfi_def_cfa_offset 8
+  84              		.cfi_offset 4, -8
+  85              		.cfi_offset 14, -4
+  86 0002 0446     		mov	r4, r0
+  57:main.c        ****     //Deactivate last target
+  58:main.c        ****     switch(active_target){
+  87              		.loc 1 58 0
+  88 0004 134B     		ldr	r3, .L15
+  89 0006 1B68     		ldr	r3, [r3]
+  90 0008 022B     		cmp	r3, #2
+  91 000a 07D0     		beq	.L7
+  92 000c 032B     		cmp	r3, #3
+  93 000e 09D0     		beq	.L8
+  94 0010 012B     		cmp	r3, #1
+  95 0012 0AD1     		bne	.L6
+  59:main.c        ****         case 1:
+  60:main.c        ****             Target_LED_1_Write(0);
+  96              		.loc 1 60 0
+  97 0014 0020     		movs	r0, #0
+  98              	.LVL4:
+  99 0016 FFF7FEFF 		bl	Target_LED_1_Write
+ 100              	.LVL5:
+  61:main.c        ****             break;
+ 101              		.loc 1 61 0
+ 102 001a 06E0     		b	.L6
+ 103              	.LVL6:
+ 104              	.L7:
+  62:main.c        ****         case 2:
+  63:main.c        ****             Target_LED_2_Write(0);
+ 105              		.loc 1 63 0
+ 106 001c 0020     		movs	r0, #0
+ 107              	.LVL7:
+ 108 001e FFF7FEFF 		bl	Target_LED_2_Write
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 4
+
+
+ 109              	.LVL8:
+  64:main.c        ****             break;
+ 110              		.loc 1 64 0
+ 111 0022 02E0     		b	.L6
+ 112              	.LVL9:
+ 113              	.L8:
+  65:main.c        ****         case 3:
+  66:main.c        ****             Target_LED_3_Write(0);
+ 114              		.loc 1 66 0
+ 115 0024 0020     		movs	r0, #0
+ 116              	.LVL10:
+ 117 0026 FFF7FEFF 		bl	Target_LED_3_Write
+ 118              	.LVL11:
+ 119              	.L6:
+  67:main.c        ****             break;
+  68:main.c        ****         default:
+  69:main.c        ****             break;
+  70:main.c        ****     }
+  71:main.c        ****     //Target_LED_1_Write(0);
+  72:main.c        ****     //Target_LED_2_Write(0);
+  73:main.c        ****     //Target_LED_3_Write(0);
+  74:main.c        ****     //Activate current target
+  75:main.c        ****     active_target = id;
+ 120              		.loc 1 75 0
+ 121 002a 0A4B     		ldr	r3, .L15
+ 122 002c 1C60     		str	r4, [r3]
+  76:main.c        ****     switch(id){                                                 //Turn on the active target's LED
+ 123              		.loc 1 76 0
+ 124 002e 022C     		cmp	r4, #2
+ 125 0030 07D0     		beq	.L11
+ 126 0032 032C     		cmp	r4, #3
+ 127 0034 09D0     		beq	.L12
+ 128 0036 012C     		cmp	r4, #1
+ 129 0038 0AD1     		bne	.L5
+  77:main.c        ****         case 1:
+  78:main.c        ****             Target_LED_1_Write(1);
+ 130              		.loc 1 78 0
+ 131 003a 0120     		movs	r0, #1
+ 132 003c FFF7FEFF 		bl	Target_LED_1_Write
+ 133              	.LVL12:
+  79:main.c        ****             break;
+ 134              		.loc 1 79 0
+ 135 0040 10BD     		pop	{r4, pc}
+ 136              	.LVL13:
+ 137              	.L11:
+  80:main.c        ****         case 2:
+  81:main.c        ****             Target_LED_2_Write(1);
+ 138              		.loc 1 81 0
+ 139 0042 0120     		movs	r0, #1
+ 140 0044 FFF7FEFF 		bl	Target_LED_2_Write
+ 141              	.LVL14:
+  82:main.c        ****             break;
+ 142              		.loc 1 82 0
+ 143 0048 10BD     		pop	{r4, pc}
+ 144              	.LVL15:
+ 145              	.L12:
+  83:main.c        ****         case 3:
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 5
+
+
+  84:main.c        ****             Target_LED_3_Write(1);
+ 146              		.loc 1 84 0
+ 147 004a 0120     		movs	r0, #1
+ 148 004c FFF7FEFF 		bl	Target_LED_3_Write
+ 149              	.LVL16:
+ 150              	.L5:
+ 151 0050 10BD     		pop	{r4, pc}
+ 152              	.LVL17:
+ 153              	.L16:
+ 154 0052 00BF     		.align	2
+ 155              	.L15:
+ 156 0054 00000000 		.word	.LANCHOR1
+ 157              		.cfi_endproc
+ 158              	.LFE66:
+ 159              		.size	ActivateTarget, .-ActivateTarget
+ 160              		.section	.text.Button_Timeout_Handler,"ax",%progbits
+ 161              		.align	2
+ 162              		.global	Button_Timeout_Handler
+ 163              		.thumb
+ 164              		.thumb_func
+ 165              		.type	Button_Timeout_Handler, %function
+ 166              	Button_Timeout_Handler:
+ 167              	.LFB65:
+  40:main.c        ****     timeout_flag = 0;                                           //No timeout
+ 168              		.loc 1 40 0
+ 169              		.cfi_startproc
+ 170              		@ args = 0, pretend = 0, frame = 0
+ 171              		@ frame_needed = 0, uses_anonymous_args = 0
+ 172 0000 08B5     		push	{r3, lr}
+ 173              		.cfi_def_cfa_offset 8
+ 174              		.cfi_offset 3, -8
+ 175              		.cfi_offset 14, -4
+  41:main.c        ****     points++;
+ 176              		.loc 1 41 0
+ 177 0002 0B4B     		ldr	r3, .L21
+ 178 0004 0022     		movs	r2, #0
+ 179 0006 9A60     		str	r2, [r3, #8]
+  42:main.c        ****     UART_BT_PutString("hit\r\n");                               //Print "hit" to UART
+ 180              		.loc 1 42 0
+ 181 0008 5A68     		ldr	r2, [r3, #4]
+ 182 000a 0132     		adds	r2, r2, #1
+ 183 000c 5A60     		str	r2, [r3, #4]
+  43:main.c        ****     Debounce_Timer_ReadStatusRegister();                        //Clear interrupt source
+ 184              		.loc 1 43 0
+ 185 000e 0948     		ldr	r0, .L21+4
+ 186 0010 FFF7FEFF 		bl	UART_BT_PutString
+ 187              	.LVL18:
+  44:main.c        ****     Debounce_Timer_Stop();                                      //Stop the timer
+ 188              		.loc 1 44 0
+ 189 0014 FFF7FEFF 		bl	Debounce_Timer_ReadStatusRegister
+ 190              	.LVL19:
+  45:main.c        ****     int target = active_target;
+ 191              		.loc 1 45 0
+ 192 0018 FFF7FEFF 		bl	Debounce_Timer_Stop
+ 193              	.LVL20:
+  46:main.c        ****     if(active_target >= 3 ){
+ 194              		.loc 1 46 0
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 6
+
+
+ 195 001c 064B     		ldr	r3, .L21+8
+ 196 001e 1868     		ldr	r0, [r3]
+ 197              	.LVL21:
+  47:main.c        ****         target = 1;
+ 198              		.loc 1 47 0
+ 199 0020 0228     		cmp	r0, #2
+ 200 0022 01DC     		bgt	.L19
+  50:main.c        ****     }
+ 201              		.loc 1 50 0
+ 202 0024 0130     		adds	r0, r0, #1
+ 203              	.LVL22:
+ 204 0026 00E0     		b	.L18
+ 205              	.L19:
+  48:main.c        ****     } else {
+ 206              		.loc 1 48 0
+ 207 0028 0120     		movs	r0, #1
+ 208              	.LVL23:
+ 209              	.L18:
+  52:main.c        **** }
+ 210              		.loc 1 52 0
+ 211 002a FFF7FEFF 		bl	ActivateTarget
+ 212              	.LVL24:
+ 213 002e 08BD     		pop	{r3, pc}
+ 214              	.L22:
+ 215              		.align	2
+ 216              	.L21:
+ 217 0030 00000000 		.word	.LANCHOR0
+ 218 0034 18000000 		.word	.LC1
+ 219 0038 00000000 		.word	.LANCHOR1
+ 220              		.cfi_endproc
+ 221              	.LFE65:
+ 222              		.size	Button_Timeout_Handler, .-Button_Timeout_Handler
+ 223              		.section	.text.getActiveTargetState,"ax",%progbits
+ 224              		.align	2
+ 225              		.global	getActiveTargetState
+ 226              		.thumb
+ 227              		.thumb_func
+ 228              		.type	getActiveTargetState, %function
+ 229              	getActiveTargetState:
+ 230              	.LFB67:
+  85:main.c        ****             break;
+  86:main.c        ****         default:
+  87:main.c        ****             break;
+  88:main.c        ****     }
+  89:main.c        **** }
+  90:main.c        **** 
+  91:main.c        **** //Return the active target's hit status
+  92:main.c        **** //Invert reading because buttons are active low
+  93:main.c        **** int getActiveTargetState(){
+ 231              		.loc 1 93 0
+ 232              		.cfi_startproc
+ 233              		@ args = 0, pretend = 0, frame = 0
+ 234              		@ frame_needed = 0, uses_anonymous_args = 0
+ 235 0000 08B5     		push	{r3, lr}
+ 236              		.cfi_def_cfa_offset 8
+ 237              		.cfi_offset 3, -8
+ 238              		.cfi_offset 14, -4
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 7
+
+
+  94:main.c        ****     switch(active_target){
+ 239              		.loc 1 94 0
+ 240 0002 0E4B     		ldr	r3, .L31
+ 241 0004 1B68     		ldr	r3, [r3]
+ 242 0006 022B     		cmp	r3, #2
+ 243 0008 09D0     		beq	.L25
+ 244 000a 032B     		cmp	r3, #3
+ 245 000c 0DD0     		beq	.L26
+ 246 000e 012B     		cmp	r3, #1
+ 247 0010 11D1     		bne	.L29
+  95:main.c        ****         case 1:
+  96:main.c        ****             return !Target_BTN_1_Read();            
+ 248              		.loc 1 96 0
+ 249 0012 FFF7FEFF 		bl	Target_BTN_1_Read
+ 250              	.LVL25:
+ 251 0016 B0FA80F0 		clz	r0, r0
+ 252 001a 4009     		lsrs	r0, r0, #5
+ 253 001c 08BD     		pop	{r3, pc}
+ 254              	.L25:
+  97:main.c        ****         case 2:
+  98:main.c        ****             return !Target_BTN_2_Read();            
+ 255              		.loc 1 98 0
+ 256 001e FFF7FEFF 		bl	Target_BTN_2_Read
+ 257              	.LVL26:
+ 258 0022 B0FA80F0 		clz	r0, r0
+ 259 0026 4009     		lsrs	r0, r0, #5
+ 260 0028 08BD     		pop	{r3, pc}
+ 261              	.L26:
+  99:main.c        ****         case 3:
+ 100:main.c        ****             return !Target_BTN_3_Read();            
+ 262              		.loc 1 100 0
+ 263 002a FFF7FEFF 		bl	Target_BTN_3_Read
+ 264              	.LVL27:
+ 265 002e B0FA80F0 		clz	r0, r0
+ 266 0032 4009     		lsrs	r0, r0, #5
+ 267 0034 08BD     		pop	{r3, pc}
+ 268              	.L29:
+ 101:main.c        ****         default:
+ 102:main.c        ****             return 0;       
+ 269              		.loc 1 102 0
+ 270 0036 0020     		movs	r0, #0
+ 103:main.c        ****     }
+ 104:main.c        **** }
+ 271              		.loc 1 104 0
+ 272 0038 08BD     		pop	{r3, pc}
+ 273              	.L32:
+ 274 003a 00BF     		.align	2
+ 275              	.L31:
+ 276 003c 00000000 		.word	.LANCHOR1
+ 277              		.cfi_endproc
+ 278              	.LFE67:
+ 279              		.size	getActiveTargetState, .-getActiveTargetState
+ 280              		.section	.text.Init,"ax",%progbits
+ 281              		.align	2
+ 282              		.global	Init
+ 283              		.thumb
+ 284              		.thumb_func
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 8
+
+
+ 285              		.type	Init, %function
+ 286              	Init:
+ 287              	.LFB68:
+ 105:main.c        **** 
+ 106:main.c        **** void Init(){
+ 288              		.loc 1 106 0
+ 289              		.cfi_startproc
+ 290              		@ args = 0, pretend = 0, frame = 0
+ 291              		@ frame_needed = 0, uses_anonymous_args = 0
+ 292 0000 08B5     		push	{r3, lr}
+ 293              		.cfi_def_cfa_offset 8
+ 294              		.cfi_offset 3, -8
+ 295              		.cfi_offset 14, -4
+ 107:main.c        ****     Debounce_Timer_Init();
+ 296              		.loc 1 107 0
+ 297 0002 FFF7FEFF 		bl	Debounce_Timer_Init
+ 298              	.LVL28:
+ 108:main.c        ****     One_Sec_Timer_Init();
+ 299              		.loc 1 108 0
+ 300 0006 FFF7FEFF 		bl	One_Sec_Timer_Init
+ 301              	.LVL29:
+ 109:main.c        ****     UART_BT_Start();
+ 302              		.loc 1 109 0
+ 303 000a FFF7FEFF 		bl	UART_BT_Start
+ 304              	.LVL30:
+ 110:main.c        ****     UART_BT_PutString("hello\r\n");    
+ 305              		.loc 1 110 0
+ 306 000e 0748     		ldr	r0, .L35
+ 307 0010 FFF7FEFF 		bl	UART_BT_PutString
+ 308              	.LVL31:
+ 111:main.c        ****     ISR_One_Sec_StartEx(One_Sec_Handler);
+ 309              		.loc 1 111 0
+ 310 0014 0648     		ldr	r0, .L35+4
+ 311 0016 FFF7FEFF 		bl	ISR_One_Sec_StartEx
+ 312              	.LVL32:
+ 112:main.c        ****     ISR_Button_Timeout_StartEx(Button_Timeout_Handler);
+ 313              		.loc 1 112 0
+ 314 001a 0648     		ldr	r0, .L35+8
+ 315 001c FFF7FEFF 		bl	ISR_Button_Timeout_StartEx
+ 316              	.LVL33:
+ 113:main.c        ****     EEPROM_Start();
+ 317              		.loc 1 113 0
+ 318 0020 FFF7FEFF 		bl	EEPROM_Start
+ 319              	.LVL34:
+ 114:main.c        ****     ActivateTarget(1);
+ 320              		.loc 1 114 0
+ 321 0024 0120     		movs	r0, #1
+ 322 0026 FFF7FEFF 		bl	ActivateTarget
+ 323              	.LVL35:
+ 324 002a 08BD     		pop	{r3, pc}
+ 325              	.L36:
+ 326              		.align	2
+ 327              	.L35:
+ 328 002c 20000000 		.word	.LC2
+ 329 0030 00000000 		.word	One_Sec_Handler
+ 330 0034 00000000 		.word	Button_Timeout_Handler
+ 331              		.cfi_endproc
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 9
+
+
+ 332              	.LFE68:
+ 333              		.size	Init, .-Init
+ 334              		.section	.text.main,"ax",%progbits
+ 335              		.align	2
+ 336              		.global	main
+ 337              		.thumb
+ 338              		.thumb_func
+ 339              		.type	main, %function
+ 340              	main:
+ 341              	.LFB69:
+ 115:main.c        **** }
+ 116:main.c        **** 
+ 117:main.c        **** int main(void)
+ 118:main.c        **** {
+ 342              		.loc 1 118 0
+ 343              		.cfi_startproc
+ 344              		@ args = 0, pretend = 0, frame = 64
+ 345              		@ frame_needed = 0, uses_anonymous_args = 0
+ 346 0000 10B5     		push	{r4, lr}
+ 347              		.cfi_def_cfa_offset 8
+ 348              		.cfi_offset 4, -8
+ 349              		.cfi_offset 14, -4
+ 350 0002 90B0     		sub	sp, sp, #64
+ 351              		.cfi_def_cfa_offset 72
+ 119:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 352              		.loc 1 119 0
+ 353              		.syntax unified
+ 354              	@ 119 "main.c" 1
+ 355 0004 62B6     		CPSIE   i
+ 356              	@ 0 "" 2
+ 120:main.c        ****     Init();
+ 357              		.loc 1 120 0
+ 358              		.thumb
+ 359              		.syntax unified
+ 360 0006 FFF7FEFF 		bl	Init
+ 361              	.LVL36:
+ 121:main.c        ****     int highScore = EEPROM_ReadByte(EEPROM_ADDR);
+ 362              		.loc 1 121 0
+ 363 000a 6420     		movs	r0, #100
+ 364 000c FFF7FEFF 		bl	EEPROM_ReadByte
+ 365              	.LVL37:
+ 366 0010 0246     		mov	r2, r0
+ 367 0012 0446     		mov	r4, r0
+ 368              	.LVL38:
+ 122:main.c        ****     char message[32];
+ 123:main.c        ****     sprintf(message, "Current High Score: %d\r\n", highScore);  //Format and print data into a stri
+ 369              		.loc 1 123 0
+ 370 0014 3649     		ldr	r1, .L49
+ 371 0016 08A8     		add	r0, sp, #32
+ 372              	.LVL39:
+ 373 0018 FFF7FEFF 		bl	sprintf
+ 374              	.LVL40:
+ 124:main.c        ****     UART_BT_PutString(message);
+ 375              		.loc 1 124 0
+ 376 001c 08A8     		add	r0, sp, #32
+ 377 001e FFF7FEFF 		bl	UART_BT_PutString
+ 378              	.LVL41:
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 10
+
+
+ 125:main.c        ****     state = READY;
+ 379              		.loc 1 125 0
+ 380 0022 0022     		movs	r2, #0
+ 381 0024 334B     		ldr	r3, .L49+4
+ 382 0026 1A60     		str	r2, [r3]
+ 383              	.L39:
+ 126:main.c        ****     for(;;)
+ 127:main.c        ****     {
+ 128:main.c        ****         switch(state){            
+ 384              		.loc 1 128 0
+ 385 0028 324B     		ldr	r3, .L49+4
+ 386 002a 1B68     		ldr	r3, [r3]
+ 387 002c 012B     		cmp	r3, #1
+ 388 002e 15D0     		beq	.L40
+ 389 0030 022B     		cmp	r3, #2
+ 390 0032 30D0     		beq	.L41
+ 391 0034 002B     		cmp	r3, #0
+ 392 0036 F7D1     		bne	.L39
+ 129:main.c        ****             case READY: {
+ 130:main.c        ****                 time = 60;
+ 393              		.loc 1 130 0
+ 394 0038 2F4B     		ldr	r3, .L49+8
+ 395 003a 3C22     		movs	r2, #60
+ 396 003c 1A60     		str	r2, [r3]
+ 131:main.c        ****                 points = 0;
+ 397              		.loc 1 131 0
+ 398 003e 0022     		movs	r2, #0
+ 399 0040 5A60     		str	r2, [r3, #4]
+ 132:main.c        ****                 if((char)UART_BT_GetChar() == 's'){             //READY -> RUNNING if 's' received 
+ 400              		.loc 1 132 0
+ 401 0042 FFF7FEFF 		bl	UART_BT_GetChar
+ 402              	.LVL42:
+ 403 0046 7328     		cmp	r0, #115
+ 404 0048 EED1     		bne	.L39
+ 133:main.c        ****                     LED_Write(1);                           //Signal running state with built-in LE
+ 405              		.loc 1 133 0
+ 406 004a 0120     		movs	r0, #1
+ 407 004c FFF7FEFF 		bl	LED_Write
+ 408              	.LVL43:
+ 134:main.c        ****                     state = RUNNING;
+ 409              		.loc 1 134 0
+ 410 0050 0122     		movs	r2, #1
+ 411 0052 284B     		ldr	r3, .L49+4
+ 412 0054 1A60     		str	r2, [r3]
+ 135:main.c        ****                     One_Sec_Timer_Start();
+ 413              		.loc 1 135 0
+ 414 0056 FFF7FEFF 		bl	One_Sec_Timer_Start
+ 415              	.LVL44:
+ 416 005a E5E7     		b	.L39
+ 417              	.L40:
+ 136:main.c        ****                 }
+ 137:main.c        ****                 break;
+ 138:main.c        ****             }
+ 139:main.c        ****             case RUNNING: {
+ 140:main.c        ****                 if(getActiveTargetState() && !timeout_flag){    //active target is hit and currentl
+ 418              		.loc 1 140 0
+ 419 005c FFF7FEFF 		bl	getActiveTargetState
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 11
+
+
+ 420              	.LVL45:
+ 421 0060 38B1     		cbz	r0, .L44
+ 422              		.loc 1 140 0 is_stmt 0 discriminator 1
+ 423 0062 254B     		ldr	r3, .L49+8
+ 424 0064 9B68     		ldr	r3, [r3, #8]
+ 425 0066 23B9     		cbnz	r3, .L44
+ 141:main.c        ****                     timeout_flag = 1;
+ 426              		.loc 1 141 0 is_stmt 1
+ 427 0068 0122     		movs	r2, #1
+ 428 006a 234B     		ldr	r3, .L49+8
+ 429 006c 9A60     		str	r2, [r3, #8]
+ 142:main.c        ****                     Debounce_Timer_Start();                     //start timeout to avoid reading mu
+ 430              		.loc 1 142 0
+ 431 006e FFF7FEFF 		bl	Debounce_Timer_Start
+ 432              	.LVL46:
+ 433              	.L44:
+ 143:main.c        ****                 }
+ 144:main.c        ****                 if(time <= 0){                                  //RUNNING -> END if time is up 
+ 434              		.loc 1 144 0
+ 435 0072 214B     		ldr	r3, .L49+8
+ 436 0074 1B68     		ldr	r3, [r3]
+ 437 0076 002B     		cmp	r3, #0
+ 438 0078 D6DC     		bgt	.L39
+ 145:main.c        ****                     Debounce_Timer_Stop();                      //Stop timers
+ 439              		.loc 1 145 0
+ 440 007a FFF7FEFF 		bl	Debounce_Timer_Stop
+ 441              	.LVL47:
+ 146:main.c        ****                     One_Sec_Timer_Stop();                       //
+ 442              		.loc 1 146 0
+ 443 007e FFF7FEFF 		bl	One_Sec_Timer_Stop
+ 444              	.LVL48:
+ 147:main.c        ****                     LED_Write(0);                               //Turn off built-in LED
+ 445              		.loc 1 147 0
+ 446 0082 0020     		movs	r0, #0
+ 447 0084 FFF7FEFF 		bl	LED_Write
+ 448              	.LVL49:
+ 148:main.c        ****                     state = END;
+ 449              		.loc 1 148 0
+ 450 0088 0222     		movs	r2, #2
+ 451 008a 1A4B     		ldr	r3, .L49+4
+ 452 008c 1A60     		str	r2, [r3]
+ 149:main.c        ****                     ActivateTarget(0);
+ 453              		.loc 1 149 0
+ 454 008e 0020     		movs	r0, #0
+ 455 0090 FFF7FEFF 		bl	ActivateTarget
+ 456              	.LVL50:
+ 457 0094 C8E7     		b	.L39
+ 458              	.L41:
+ 150:main.c        ****                 }                               
+ 151:main.c        ****                 
+ 152:main.c        ****                 break;
+ 153:main.c        ****             }
+ 154:main.c        ****             case END: {
+ 155:main.c        ****                 if(!finished){
+ 459              		.loc 1 155 0
+ 460 0096 184B     		ldr	r3, .L49+8
+ 461 0098 DB68     		ldr	r3, [r3, #12]
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 12
+
+
+ 462 009a ABB9     		cbnz	r3, .L45
+ 463              	.LBB2:
+ 156:main.c        ****                     int highScore = EEPROM_ReadByte(EEPROM_ADDR);   //Read last highscore
+ 464              		.loc 1 156 0
+ 465 009c 6420     		movs	r0, #100
+ 466 009e FFF7FEFF 		bl	EEPROM_ReadByte
+ 467              	.LVL51:
+ 157:main.c        ****                     if(points > highScore || highScore == 255){     //Write if necessary, check if 
+ 468              		.loc 1 157 0
+ 469 00a2 154B     		ldr	r3, .L49+8
+ 470 00a4 5B68     		ldr	r3, [r3, #4]
+ 471 00a6 9842     		cmp	r0, r3
+ 472 00a8 01DB     		blt	.L46
+ 473              		.loc 1 157 0 is_stmt 0 discriminator 1
+ 474 00aa FF28     		cmp	r0, #255
+ 475 00ac 08D1     		bne	.L47
+ 476              	.L46:
+ 158:main.c        ****                         UART_BT_PutString("New High Score\r\n");
+ 477              		.loc 1 158 0 is_stmt 1
+ 478 00ae 1348     		ldr	r0, .L49+12
+ 479              	.LVL52:
+ 480 00b0 FFF7FEFF 		bl	UART_BT_PutString
+ 481              	.LVL53:
+ 159:main.c        ****                         EEPROM_WriteByte(points, EEPROM_ADDR);
+ 482              		.loc 1 159 0
+ 483 00b4 104B     		ldr	r3, .L49+8
+ 484 00b6 5868     		ldr	r0, [r3, #4]
+ 485 00b8 6421     		movs	r1, #100
+ 486 00ba C0B2     		uxtb	r0, r0
+ 487 00bc FFF7FEFF 		bl	EEPROM_WriteByte
+ 488              	.LVL54:
+ 489              	.L47:
+ 160:main.c        ****                     }
+ 161:main.c        ****                     finished = 1;
+ 490              		.loc 1 161 0
+ 491 00c0 0122     		movs	r2, #1
+ 492 00c2 0D4B     		ldr	r3, .L49+8
+ 493 00c4 DA60     		str	r2, [r3, #12]
+ 494              	.LBE2:
+ 495 00c6 AFE7     		b	.L39
+ 496              	.L45:
+ 162:main.c        ****                 } else if((char)UART_BT_GetChar() == 'r'){         //END -> READY if 'r' received t
+ 497              		.loc 1 162 0
+ 498 00c8 FFF7FEFF 		bl	UART_BT_GetChar
+ 499              	.LVL55:
+ 500 00cc 7228     		cmp	r0, #114
+ 501 00ce ABD1     		bne	.L39
+ 502              	.LBB3:
+ 163:main.c        ****                     state = READY;
+ 503              		.loc 1 163 0
+ 504 00d0 0022     		movs	r2, #0
+ 505 00d2 084B     		ldr	r3, .L49+4
+ 506 00d4 1A60     		str	r2, [r3]
+ 164:main.c        ****                     ActivateTarget(1);
+ 507              		.loc 1 164 0
+ 508 00d6 0120     		movs	r0, #1
+ 509 00d8 FFF7FEFF 		bl	ActivateTarget
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 13
+
+
+ 510              	.LVL56:
+ 165:main.c        ****                     char message[32];
+ 166:main.c        ****                     sprintf(message, "Current High Score: %d\r\n", highScore);  //Format and print 
+ 511              		.loc 1 166 0
+ 512 00dc 2246     		mov	r2, r4
+ 513 00de 0449     		ldr	r1, .L49
+ 514 00e0 6846     		mov	r0, sp
+ 515 00e2 FFF7FEFF 		bl	sprintf
+ 516              	.LVL57:
+ 167:main.c        ****                     UART_BT_PutString(message);
+ 517              		.loc 1 167 0
+ 518 00e6 6846     		mov	r0, sp
+ 519 00e8 FFF7FEFF 		bl	UART_BT_PutString
+ 520              	.LVL58:
+ 521 00ec 9CE7     		b	.L39
+ 522              	.L50:
+ 523 00ee 00BF     		.align	2
+ 524              	.L49:
+ 525 00f0 28000000 		.word	.LC3
+ 526 00f4 00000000 		.word	state
+ 527 00f8 00000000 		.word	.LANCHOR0
+ 528 00fc 44000000 		.word	.LC4
+ 529              	.LBE3:
+ 530              		.cfi_endproc
+ 531              	.LFE69:
+ 532              		.size	main, .-main
+ 533              		.global	active_target
+ 534              		.global	finished
+ 535              		.global	points
+ 536              		.global	timeout_flag
+ 537              		.global	time
+ 538              		.comm	state,4,4
+ 539              		.data
+ 540              		.align	2
+ 541              		.set	.LANCHOR1,. + 0
+ 542              		.type	active_target, %object
+ 543              		.size	active_target, 4
+ 544              	active_target:
+ 545 0000 FFFFFFFF 		.word	-1
+ 546              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 547              		.align	2
+ 548              	.LC0:
+ 549 0000 54696D65 		.ascii	"Time: %d, Score: %d\015\012\000"
+ 549      3A202564 
+ 549      2C205363 
+ 549      6F72653A 
+ 549      2025640D 
+ 550 0016 0000     		.space	2
+ 551              	.LC1:
+ 552 0018 6869740D 		.ascii	"hit\015\012\000"
+ 552      0A00
+ 553 001e 0000     		.space	2
+ 554              	.LC2:
+ 555 0020 68656C6C 		.ascii	"hello\015\012\000"
+ 555      6F0D0A00 
+ 556              	.LC3:
+ 557 0028 43757272 		.ascii	"Current High Score: %d\015\012\000"
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 14
+
+
+ 557      656E7420 
+ 557      48696768 
+ 557      2053636F 
+ 557      72653A20 
+ 558 0041 000000   		.space	3
+ 559              	.LC4:
+ 560 0044 4E657720 		.ascii	"New High Score\015\012\000"
+ 560      48696768 
+ 560      2053636F 
+ 560      72650D0A 
+ 560      00
+ 561              		.bss
+ 562              		.align	2
+ 563              		.set	.LANCHOR0,. + 0
+ 564              		.type	time, %object
+ 565              		.size	time, 4
+ 566              	time:
+ 567 0000 00000000 		.space	4
+ 568              		.type	points, %object
+ 569              		.size	points, 4
+ 570              	points:
+ 571 0004 00000000 		.space	4
+ 572              		.type	timeout_flag, %object
+ 573              		.size	timeout_flag, 4
+ 574              	timeout_flag:
+ 575 0008 00000000 		.space	4
+ 576              		.type	finished, %object
+ 577              		.size	finished, 4
+ 578              	finished:
+ 579 000c 00000000 		.space	4
+ 580              		.text
+ 581              	.Letext0:
+ 582              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 583              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 584              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 585              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 586              		.file 6 "Generated_Source\\PSoC5/UART_BT.h"
+ 587              		.file 7 "Generated_Source\\PSoC5/One_Sec_Timer.h"
+ 588              		.file 8 "Generated_Source\\PSoC5/Target_LED_1.h"
+ 589              		.file 9 "Generated_Source\\PSoC5/Target_LED_2.h"
+ 590              		.file 10 "Generated_Source\\PSoC5/Target_LED_3.h"
+ 591              		.file 11 "Generated_Source\\PSoC5/Debounce_Timer.h"
+ 592              		.file 12 "Generated_Source\\PSoC5/Target_BTN_1.h"
+ 593              		.file 13 "Generated_Source\\PSoC5/Target_BTN_2.h"
+ 594              		.file 14 "Generated_Source\\PSoC5/Target_BTN_3.h"
+ 595              		.file 15 "Generated_Source\\PSoC5/ISR_One_Sec.h"
+ 596              		.file 16 "Generated_Source\\PSoC5/ISR_Button_Timeout.h"
+ 597              		.file 17 "Generated_Source\\PSoC5/EEPROM.h"
+ 598              		.file 18 "Generated_Source\\PSoC5/LED.h"
+ 599              		.section	.debug_info,"",%progbits
+ 600              	.Ldebug_info0:
+ 601 0000 FD050000 		.4byte	0x5fd
+ 602 0004 0400     		.2byte	0x4
+ 603 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 604 000a 04       		.byte	0x4
+ 605 000b 01       		.uleb128 0x1
+ 606 000c D4000000 		.4byte	.LASF54
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 15
+
+
+ 607 0010 0C       		.byte	0xc
+ 608 0011 CC020000 		.4byte	.LASF55
+ 609 0015 02030000 		.4byte	.LASF56
+ 610 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 611 001d 00000000 		.4byte	0
+ 612 0021 00000000 		.4byte	.Ldebug_line0
+ 613 0025 02       		.uleb128 0x2
+ 614 0026 01       		.byte	0x1
+ 615 0027 06       		.byte	0x6
+ 616 0028 8A020000 		.4byte	.LASF0
+ 617 002c 02       		.uleb128 0x2
+ 618 002d 01       		.byte	0x1
+ 619 002e 08       		.byte	0x8
+ 620 002f C6000000 		.4byte	.LASF1
+ 621 0033 02       		.uleb128 0x2
+ 622 0034 02       		.byte	0x2
+ 623 0035 05       		.byte	0x5
+ 624 0036 74000000 		.4byte	.LASF2
+ 625 003a 02       		.uleb128 0x2
+ 626 003b 02       		.byte	0x2
+ 627 003c 07       		.byte	0x7
+ 628 003d 8B010000 		.4byte	.LASF3
+ 629 0041 03       		.uleb128 0x3
+ 630 0042 18000000 		.4byte	.LASF9
+ 631 0046 02       		.byte	0x2
+ 632 0047 3F       		.byte	0x3f
+ 633 0048 4C000000 		.4byte	0x4c
+ 634 004c 02       		.uleb128 0x2
+ 635 004d 04       		.byte	0x4
+ 636 004e 05       		.byte	0x5
+ 637 004f 36000000 		.4byte	.LASF4
+ 638 0053 02       		.uleb128 0x2
+ 639 0054 04       		.byte	0x4
+ 640 0055 07       		.byte	0x7
+ 641 0056 ED010000 		.4byte	.LASF5
+ 642 005a 02       		.uleb128 0x2
+ 643 005b 08       		.byte	0x8
+ 644 005c 05       		.byte	0x5
+ 645 005d BE020000 		.4byte	.LASF6
+ 646 0061 02       		.uleb128 0x2
+ 647 0062 08       		.byte	0x8
+ 648 0063 07       		.byte	0x7
+ 649 0064 73020000 		.4byte	.LASF7
+ 650 0068 04       		.uleb128 0x4
+ 651 0069 04       		.byte	0x4
+ 652 006a 05       		.byte	0x5
+ 653 006b 696E7400 		.ascii	"int\000"
+ 654 006f 02       		.uleb128 0x2
+ 655 0070 04       		.byte	0x4
+ 656 0071 07       		.byte	0x7
+ 657 0072 59020000 		.4byte	.LASF8
+ 658 0076 03       		.uleb128 0x3
+ 659 0077 AD020000 		.4byte	.LASF10
+ 660 007b 03       		.byte	0x3
+ 661 007c 2C       		.byte	0x2c
+ 662 007d 41000000 		.4byte	0x41
+ 663 0081 02       		.uleb128 0x2
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 16
+
+
+ 664 0082 04       		.byte	0x4
+ 665 0083 04       		.byte	0x4
+ 666 0084 9A000000 		.4byte	.LASF11
+ 667 0088 02       		.uleb128 0x2
+ 668 0089 08       		.byte	0x8
+ 669 008a 04       		.byte	0x4
+ 670 008b 7E000000 		.4byte	.LASF12
+ 671 008f 02       		.uleb128 0x2
+ 672 0090 01       		.byte	0x1
+ 673 0091 08       		.byte	0x8
+ 674 0092 D3020000 		.4byte	.LASF13
+ 675 0096 02       		.uleb128 0x2
+ 676 0097 08       		.byte	0x8
+ 677 0098 04       		.byte	0x4
+ 678 0099 D0030000 		.4byte	.LASF14
+ 679 009d 02       		.uleb128 0x2
+ 680 009e 04       		.byte	0x4
+ 681 009f 07       		.byte	0x7
+ 682 00a0 B5020000 		.4byte	.LASF15
+ 683 00a4 05       		.uleb128 0x5
+ 684 00a5 A3010000 		.4byte	.LASF16
+ 685 00a9 01       		.byte	0x1
+ 686 00aa 1F       		.byte	0x1f
+ 687 00ab 00000000 		.4byte	.LFB64
+ 688 00af 30000000 		.4byte	.LFE64-.LFB64
+ 689 00b3 01       		.uleb128 0x1
+ 690 00b4 9C       		.byte	0x9c
+ 691 00b5 02010000 		.4byte	0x102
+ 692 00b9 06       		.uleb128 0x6
+ 693 00ba 00000000 		.4byte	.LASF19
+ 694 00be 01       		.byte	0x1
+ 695 00bf 21       		.byte	0x21
+ 696 00c0 02010000 		.4byte	0x102
+ 697 00c4 02       		.uleb128 0x2
+ 698 00c5 91       		.byte	0x91
+ 699 00c6 58       		.sleb128 -40
+ 700 00c7 07       		.uleb128 0x7
+ 701 00c8 18000000 		.4byte	.LVL0
+ 702 00cc F8040000 		.4byte	0x4f8
+ 703 00d0 E4000000 		.4byte	0xe4
+ 704 00d4 08       		.uleb128 0x8
+ 705 00d5 01       		.uleb128 0x1
+ 706 00d6 50       		.byte	0x50
+ 707 00d7 02       		.uleb128 0x2
+ 708 00d8 7D       		.byte	0x7d
+ 709 00d9 00       		.sleb128 0
+ 710 00da 08       		.uleb128 0x8
+ 711 00db 01       		.uleb128 0x1
+ 712 00dc 51       		.byte	0x51
+ 713 00dd 05       		.uleb128 0x5
+ 714 00de 03       		.byte	0x3
+ 715 00df 00000000 		.4byte	.LC0
+ 716 00e3 00       		.byte	0
+ 717 00e4 07       		.uleb128 0x7
+ 718 00e5 1E000000 		.4byte	.LVL1
+ 719 00e9 03050000 		.4byte	0x503
+ 720 00ed F8000000 		.4byte	0xf8
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 17
+
+
+ 721 00f1 08       		.uleb128 0x8
+ 722 00f2 01       		.uleb128 0x1
+ 723 00f3 50       		.byte	0x50
+ 724 00f4 02       		.uleb128 0x2
+ 725 00f5 7D       		.byte	0x7d
+ 726 00f6 00       		.sleb128 0
+ 727 00f7 00       		.byte	0
+ 728 00f8 09       		.uleb128 0x9
+ 729 00f9 22000000 		.4byte	.LVL2
+ 730 00fd 0E050000 		.4byte	0x50e
+ 731 0101 00       		.byte	0
+ 732 0102 0A       		.uleb128 0xa
+ 733 0103 8F000000 		.4byte	0x8f
+ 734 0107 12010000 		.4byte	0x112
+ 735 010b 0B       		.uleb128 0xb
+ 736 010c 9D000000 		.4byte	0x9d
+ 737 0110 1F       		.byte	0x1f
+ 738 0111 00       		.byte	0
+ 739 0112 05       		.uleb128 0x5
+ 740 0113 11020000 		.4byte	.LASF17
+ 741 0117 01       		.byte	0x1
+ 742 0118 38       		.byte	0x38
+ 743 0119 00000000 		.4byte	.LFB66
+ 744 011d 58000000 		.4byte	.LFE66-.LFB66
+ 745 0121 01       		.uleb128 0x1
+ 746 0122 9C       		.byte	0x9c
+ 747 0123 A4010000 		.4byte	0x1a4
+ 748 0127 0C       		.uleb128 0xc
+ 749 0128 696400   		.ascii	"id\000"
+ 750 012b 01       		.byte	0x1
+ 751 012c 38       		.byte	0x38
+ 752 012d 68000000 		.4byte	0x68
+ 753 0131 00000000 		.4byte	.LLST0
+ 754 0135 07       		.uleb128 0x7
+ 755 0136 1A000000 		.4byte	.LVL5
+ 756 013a 19050000 		.4byte	0x519
+ 757 013e 48010000 		.4byte	0x148
+ 758 0142 08       		.uleb128 0x8
+ 759 0143 01       		.uleb128 0x1
+ 760 0144 50       		.byte	0x50
+ 761 0145 01       		.uleb128 0x1
+ 762 0146 30       		.byte	0x30
+ 763 0147 00       		.byte	0
+ 764 0148 07       		.uleb128 0x7
+ 765 0149 22000000 		.4byte	.LVL8
+ 766 014d 24050000 		.4byte	0x524
+ 767 0151 5B010000 		.4byte	0x15b
+ 768 0155 08       		.uleb128 0x8
+ 769 0156 01       		.uleb128 0x1
+ 770 0157 50       		.byte	0x50
+ 771 0158 01       		.uleb128 0x1
+ 772 0159 30       		.byte	0x30
+ 773 015a 00       		.byte	0
+ 774 015b 07       		.uleb128 0x7
+ 775 015c 2A000000 		.4byte	.LVL11
+ 776 0160 2F050000 		.4byte	0x52f
+ 777 0164 6E010000 		.4byte	0x16e
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 18
+
+
+ 778 0168 08       		.uleb128 0x8
+ 779 0169 01       		.uleb128 0x1
+ 780 016a 50       		.byte	0x50
+ 781 016b 01       		.uleb128 0x1
+ 782 016c 30       		.byte	0x30
+ 783 016d 00       		.byte	0
+ 784 016e 07       		.uleb128 0x7
+ 785 016f 40000000 		.4byte	.LVL12
+ 786 0173 19050000 		.4byte	0x519
+ 787 0177 81010000 		.4byte	0x181
+ 788 017b 08       		.uleb128 0x8
+ 789 017c 01       		.uleb128 0x1
+ 790 017d 50       		.byte	0x50
+ 791 017e 01       		.uleb128 0x1
+ 792 017f 31       		.byte	0x31
+ 793 0180 00       		.byte	0
+ 794 0181 07       		.uleb128 0x7
+ 795 0182 48000000 		.4byte	.LVL14
+ 796 0186 24050000 		.4byte	0x524
+ 797 018a 94010000 		.4byte	0x194
+ 798 018e 08       		.uleb128 0x8
+ 799 018f 01       		.uleb128 0x1
+ 800 0190 50       		.byte	0x50
+ 801 0191 01       		.uleb128 0x1
+ 802 0192 31       		.byte	0x31
+ 803 0193 00       		.byte	0
+ 804 0194 0D       		.uleb128 0xd
+ 805 0195 50000000 		.4byte	.LVL16
+ 806 0199 2F050000 		.4byte	0x52f
+ 807 019d 08       		.uleb128 0x8
+ 808 019e 01       		.uleb128 0x1
+ 809 019f 50       		.byte	0x50
+ 810 01a0 01       		.uleb128 0x1
+ 811 01a1 31       		.byte	0x31
+ 812 01a2 00       		.byte	0
+ 813 01a3 00       		.byte	0
+ 814 01a4 05       		.uleb128 0x5
+ 815 01a5 D8020000 		.4byte	.LASF18
+ 816 01a9 01       		.byte	0x1
+ 817 01aa 28       		.byte	0x28
+ 818 01ab 00000000 		.4byte	.LFB65
+ 819 01af 3C000000 		.4byte	.LFE65-.LFB65
+ 820 01b3 01       		.uleb128 0x1
+ 821 01b4 9C       		.byte	0x9c
+ 822 01b5 FB010000 		.4byte	0x1fb
+ 823 01b9 0E       		.uleb128 0xe
+ 824 01ba 93000000 		.4byte	.LASF20
+ 825 01be 01       		.byte	0x1
+ 826 01bf 2E       		.byte	0x2e
+ 827 01c0 68000000 		.4byte	0x68
+ 828 01c4 58000000 		.4byte	.LLST1
+ 829 01c8 07       		.uleb128 0x7
+ 830 01c9 14000000 		.4byte	.LVL18
+ 831 01cd 03050000 		.4byte	0x503
+ 832 01d1 DF010000 		.4byte	0x1df
+ 833 01d5 08       		.uleb128 0x8
+ 834 01d6 01       		.uleb128 0x1
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 19
+
+
+ 835 01d7 50       		.byte	0x50
+ 836 01d8 05       		.uleb128 0x5
+ 837 01d9 03       		.byte	0x3
+ 838 01da 18000000 		.4byte	.LC1
+ 839 01de 00       		.byte	0
+ 840 01df 09       		.uleb128 0x9
+ 841 01e0 18000000 		.4byte	.LVL19
+ 842 01e4 3A050000 		.4byte	0x53a
+ 843 01e8 09       		.uleb128 0x9
+ 844 01e9 1C000000 		.4byte	.LVL20
+ 845 01ed 45050000 		.4byte	0x545
+ 846 01f1 09       		.uleb128 0x9
+ 847 01f2 2E000000 		.4byte	.LVL24
+ 848 01f6 12010000 		.4byte	0x112
+ 849 01fa 00       		.byte	0
+ 850 01fb 0F       		.uleb128 0xf
+ 851 01fc 76010000 		.4byte	.LASF21
+ 852 0200 01       		.byte	0x1
+ 853 0201 5D       		.byte	0x5d
+ 854 0202 68000000 		.4byte	0x68
+ 855 0206 00000000 		.4byte	.LFB67
+ 856 020a 40000000 		.4byte	.LFE67-.LFB67
+ 857 020e 01       		.uleb128 0x1
+ 858 020f 9C       		.byte	0x9c
+ 859 0210 30020000 		.4byte	0x230
+ 860 0214 09       		.uleb128 0x9
+ 861 0215 16000000 		.4byte	.LVL25
+ 862 0219 50050000 		.4byte	0x550
+ 863 021d 09       		.uleb128 0x9
+ 864 021e 22000000 		.4byte	.LVL26
+ 865 0222 5B050000 		.4byte	0x55b
+ 866 0226 09       		.uleb128 0x9
+ 867 0227 2E000000 		.4byte	.LVL27
+ 868 022b 66050000 		.4byte	0x566
+ 869 022f 00       		.byte	0
+ 870 0230 10       		.uleb128 0x10
+ 871 0231 9E010000 		.4byte	.LASF57
+ 872 0235 01       		.byte	0x1
+ 873 0236 6A       		.byte	0x6a
+ 874 0237 00000000 		.4byte	.LFB68
+ 875 023b 38000000 		.4byte	.LFE68-.LFB68
+ 876 023f 01       		.uleb128 0x1
+ 877 0240 9C       		.byte	0x9c
+ 878 0241 BE020000 		.4byte	0x2be
+ 879 0245 09       		.uleb128 0x9
+ 880 0246 06000000 		.4byte	.LVL28
+ 881 024a 71050000 		.4byte	0x571
+ 882 024e 09       		.uleb128 0x9
+ 883 024f 0A000000 		.4byte	.LVL29
+ 884 0253 7C050000 		.4byte	0x57c
+ 885 0257 09       		.uleb128 0x9
+ 886 0258 0E000000 		.4byte	.LVL30
+ 887 025c 87050000 		.4byte	0x587
+ 888 0260 07       		.uleb128 0x7
+ 889 0261 14000000 		.4byte	.LVL31
+ 890 0265 03050000 		.4byte	0x503
+ 891 0269 77020000 		.4byte	0x277
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 20
+
+
+ 892 026d 08       		.uleb128 0x8
+ 893 026e 01       		.uleb128 0x1
+ 894 026f 50       		.byte	0x50
+ 895 0270 05       		.uleb128 0x5
+ 896 0271 03       		.byte	0x3
+ 897 0272 20000000 		.4byte	.LC2
+ 898 0276 00       		.byte	0
+ 899 0277 07       		.uleb128 0x7
+ 900 0278 1A000000 		.4byte	.LVL32
+ 901 027c 92050000 		.4byte	0x592
+ 902 0280 8E020000 		.4byte	0x28e
+ 903 0284 08       		.uleb128 0x8
+ 904 0285 01       		.uleb128 0x1
+ 905 0286 50       		.byte	0x50
+ 906 0287 05       		.uleb128 0x5
+ 907 0288 03       		.byte	0x3
+ 908 0289 00000000 		.4byte	One_Sec_Handler
+ 909 028d 00       		.byte	0
+ 910 028e 07       		.uleb128 0x7
+ 911 028f 20000000 		.4byte	.LVL33
+ 912 0293 9D050000 		.4byte	0x59d
+ 913 0297 A5020000 		.4byte	0x2a5
+ 914 029b 08       		.uleb128 0x8
+ 915 029c 01       		.uleb128 0x1
+ 916 029d 50       		.byte	0x50
+ 917 029e 05       		.uleb128 0x5
+ 918 029f 03       		.byte	0x3
+ 919 02a0 00000000 		.4byte	Button_Timeout_Handler
+ 920 02a4 00       		.byte	0
+ 921 02a5 09       		.uleb128 0x9
+ 922 02a6 24000000 		.4byte	.LVL34
+ 923 02aa A8050000 		.4byte	0x5a8
+ 924 02ae 0D       		.uleb128 0xd
+ 925 02af 2A000000 		.4byte	.LVL35
+ 926 02b3 12010000 		.4byte	0x112
+ 927 02b7 08       		.uleb128 0x8
+ 928 02b8 01       		.uleb128 0x1
+ 929 02b9 50       		.byte	0x50
+ 930 02ba 01       		.uleb128 0x1
+ 931 02bb 31       		.byte	0x31
+ 932 02bc 00       		.byte	0
+ 933 02bd 00       		.byte	0
+ 934 02be 11       		.uleb128 0x11
+ 935 02bf 46020000 		.4byte	.LASF58
+ 936 02c3 01       		.byte	0x1
+ 937 02c4 75       		.byte	0x75
+ 938 02c5 68000000 		.4byte	0x68
+ 939 02c9 00000000 		.4byte	.LFB69
+ 940 02cd 00010000 		.4byte	.LFE69-.LFB69
+ 941 02d1 01       		.uleb128 0x1
+ 942 02d2 9C       		.byte	0x9c
+ 943 02d3 7C040000 		.4byte	0x47c
+ 944 02d7 0E       		.uleb128 0xe
+ 945 02d8 A1030000 		.4byte	.LASF22
+ 946 02dc 01       		.byte	0x1
+ 947 02dd 79       		.byte	0x79
+ 948 02de 68000000 		.4byte	0x68
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 21
+
+
+ 949 02e2 6B000000 		.4byte	.LLST2
+ 950 02e6 06       		.uleb128 0x6
+ 951 02e7 00000000 		.4byte	.LASF19
+ 952 02eb 01       		.byte	0x1
+ 953 02ec 7A       		.byte	0x7a
+ 954 02ed 02010000 		.4byte	0x102
+ 955 02f1 02       		.uleb128 0x2
+ 956 02f2 91       		.byte	0x91
+ 957 02f3 58       		.sleb128 -40
+ 958 02f4 12       		.uleb128 0x12
+ 959 02f5 9C000000 		.4byte	.LBB2
+ 960 02f9 2A000000 		.4byte	.LBE2-.LBB2
+ 961 02fd 4C030000 		.4byte	0x34c
+ 962 0301 0E       		.uleb128 0xe
+ 963 0302 A1030000 		.4byte	.LASF22
+ 964 0306 01       		.byte	0x1
+ 965 0307 9C       		.byte	0x9c
+ 966 0308 68000000 		.4byte	0x68
+ 967 030c 94000000 		.4byte	.LLST3
+ 968 0310 07       		.uleb128 0x7
+ 969 0311 A2000000 		.4byte	.LVL51
+ 970 0315 B3050000 		.4byte	0x5b3
+ 971 0319 24030000 		.4byte	0x324
+ 972 031d 08       		.uleb128 0x8
+ 973 031e 01       		.uleb128 0x1
+ 974 031f 50       		.byte	0x50
+ 975 0320 02       		.uleb128 0x2
+ 976 0321 08       		.byte	0x8
+ 977 0322 64       		.byte	0x64
+ 978 0323 00       		.byte	0
+ 979 0324 07       		.uleb128 0x7
+ 980 0325 B4000000 		.4byte	.LVL53
+ 981 0329 03050000 		.4byte	0x503
+ 982 032d 3B030000 		.4byte	0x33b
+ 983 0331 08       		.uleb128 0x8
+ 984 0332 01       		.uleb128 0x1
+ 985 0333 50       		.byte	0x50
+ 986 0334 05       		.uleb128 0x5
+ 987 0335 03       		.byte	0x3
+ 988 0336 44000000 		.4byte	.LC4
+ 989 033a 00       		.byte	0
+ 990 033b 0D       		.uleb128 0xd
+ 991 033c C0000000 		.4byte	.LVL54
+ 992 0340 BE050000 		.4byte	0x5be
+ 993 0344 08       		.uleb128 0x8
+ 994 0345 01       		.uleb128 0x1
+ 995 0346 51       		.byte	0x51
+ 996 0347 02       		.uleb128 0x2
+ 997 0348 08       		.byte	0x8
+ 998 0349 64       		.byte	0x64
+ 999 034a 00       		.byte	0
+ 1000 034b 00       		.byte	0
+ 1001 034c 12       		.uleb128 0x12
+ 1002 034d D0000000 		.4byte	.LBB3
+ 1003 0351 30000000 		.4byte	.LBE3-.LBB3
+ 1004 0355 AF030000 		.4byte	0x3af
+ 1005 0359 06       		.uleb128 0x6
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 22
+
+
+ 1006 035a 00000000 		.4byte	.LASF19
+ 1007 035e 01       		.byte	0x1
+ 1008 035f A5       		.byte	0xa5
+ 1009 0360 02010000 		.4byte	0x102
+ 1010 0364 03       		.uleb128 0x3
+ 1011 0365 91       		.byte	0x91
+ 1012 0366 B87F     		.sleb128 -72
+ 1013 0368 07       		.uleb128 0x7
+ 1014 0369 DC000000 		.4byte	.LVL56
+ 1015 036d 12010000 		.4byte	0x112
+ 1016 0371 7B030000 		.4byte	0x37b
+ 1017 0375 08       		.uleb128 0x8
+ 1018 0376 01       		.uleb128 0x1
+ 1019 0377 50       		.byte	0x50
+ 1020 0378 01       		.uleb128 0x1
+ 1021 0379 31       		.byte	0x31
+ 1022 037a 00       		.byte	0
+ 1023 037b 07       		.uleb128 0x7
+ 1024 037c E6000000 		.4byte	.LVL57
+ 1025 0380 F8040000 		.4byte	0x4f8
+ 1026 0384 9E030000 		.4byte	0x39e
+ 1027 0388 08       		.uleb128 0x8
+ 1028 0389 01       		.uleb128 0x1
+ 1029 038a 50       		.byte	0x50
+ 1030 038b 02       		.uleb128 0x2
+ 1031 038c 7D       		.byte	0x7d
+ 1032 038d 00       		.sleb128 0
+ 1033 038e 08       		.uleb128 0x8
+ 1034 038f 01       		.uleb128 0x1
+ 1035 0390 51       		.byte	0x51
+ 1036 0391 05       		.uleb128 0x5
+ 1037 0392 03       		.byte	0x3
+ 1038 0393 28000000 		.4byte	.LC3
+ 1039 0397 08       		.uleb128 0x8
+ 1040 0398 01       		.uleb128 0x1
+ 1041 0399 52       		.byte	0x52
+ 1042 039a 02       		.uleb128 0x2
+ 1043 039b 74       		.byte	0x74
+ 1044 039c 00       		.sleb128 0
+ 1045 039d 00       		.byte	0
+ 1046 039e 0D       		.uleb128 0xd
+ 1047 039f EC000000 		.4byte	.LVL58
+ 1048 03a3 03050000 		.4byte	0x503
+ 1049 03a7 08       		.uleb128 0x8
+ 1050 03a8 01       		.uleb128 0x1
+ 1051 03a9 50       		.byte	0x50
+ 1052 03aa 02       		.uleb128 0x2
+ 1053 03ab 7D       		.byte	0x7d
+ 1054 03ac 00       		.sleb128 0
+ 1055 03ad 00       		.byte	0
+ 1056 03ae 00       		.byte	0
+ 1057 03af 09       		.uleb128 0x9
+ 1058 03b0 0A000000 		.4byte	.LVL36
+ 1059 03b4 30020000 		.4byte	0x230
+ 1060 03b8 07       		.uleb128 0x7
+ 1061 03b9 10000000 		.4byte	.LVL37
+ 1062 03bd B3050000 		.4byte	0x5b3
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 23
+
+
+ 1063 03c1 CC030000 		.4byte	0x3cc
+ 1064 03c5 08       		.uleb128 0x8
+ 1065 03c6 01       		.uleb128 0x1
+ 1066 03c7 50       		.byte	0x50
+ 1067 03c8 02       		.uleb128 0x2
+ 1068 03c9 08       		.byte	0x8
+ 1069 03ca 64       		.byte	0x64
+ 1070 03cb 00       		.byte	0
+ 1071 03cc 07       		.uleb128 0x7
+ 1072 03cd 1C000000 		.4byte	.LVL40
+ 1073 03d1 F8040000 		.4byte	0x4f8
+ 1074 03d5 EF030000 		.4byte	0x3ef
+ 1075 03d9 08       		.uleb128 0x8
+ 1076 03da 01       		.uleb128 0x1
+ 1077 03db 50       		.byte	0x50
+ 1078 03dc 02       		.uleb128 0x2
+ 1079 03dd 91       		.byte	0x91
+ 1080 03de 58       		.sleb128 -40
+ 1081 03df 08       		.uleb128 0x8
+ 1082 03e0 01       		.uleb128 0x1
+ 1083 03e1 51       		.byte	0x51
+ 1084 03e2 05       		.uleb128 0x5
+ 1085 03e3 03       		.byte	0x3
+ 1086 03e4 28000000 		.4byte	.LC3
+ 1087 03e8 08       		.uleb128 0x8
+ 1088 03e9 01       		.uleb128 0x1
+ 1089 03ea 52       		.byte	0x52
+ 1090 03eb 02       		.uleb128 0x2
+ 1091 03ec 74       		.byte	0x74
+ 1092 03ed 00       		.sleb128 0
+ 1093 03ee 00       		.byte	0
+ 1094 03ef 07       		.uleb128 0x7
+ 1095 03f0 22000000 		.4byte	.LVL41
+ 1096 03f4 03050000 		.4byte	0x503
+ 1097 03f8 03040000 		.4byte	0x403
+ 1098 03fc 08       		.uleb128 0x8
+ 1099 03fd 01       		.uleb128 0x1
+ 1100 03fe 50       		.byte	0x50
+ 1101 03ff 02       		.uleb128 0x2
+ 1102 0400 91       		.byte	0x91
+ 1103 0401 58       		.sleb128 -40
+ 1104 0402 00       		.byte	0
+ 1105 0403 09       		.uleb128 0x9
+ 1106 0404 46000000 		.4byte	.LVL42
+ 1107 0408 C9050000 		.4byte	0x5c9
+ 1108 040c 07       		.uleb128 0x7
+ 1109 040d 50000000 		.4byte	.LVL43
+ 1110 0411 D4050000 		.4byte	0x5d4
+ 1111 0415 1F040000 		.4byte	0x41f
+ 1112 0419 08       		.uleb128 0x8
+ 1113 041a 01       		.uleb128 0x1
+ 1114 041b 50       		.byte	0x50
+ 1115 041c 01       		.uleb128 0x1
+ 1116 041d 31       		.byte	0x31
+ 1117 041e 00       		.byte	0
+ 1118 041f 09       		.uleb128 0x9
+ 1119 0420 5A000000 		.4byte	.LVL44
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 24
+
+
+ 1120 0424 DF050000 		.4byte	0x5df
+ 1121 0428 09       		.uleb128 0x9
+ 1122 0429 60000000 		.4byte	.LVL45
+ 1123 042d FB010000 		.4byte	0x1fb
+ 1124 0431 09       		.uleb128 0x9
+ 1125 0432 72000000 		.4byte	.LVL46
+ 1126 0436 EA050000 		.4byte	0x5ea
+ 1127 043a 09       		.uleb128 0x9
+ 1128 043b 7E000000 		.4byte	.LVL47
+ 1129 043f 45050000 		.4byte	0x545
+ 1130 0443 09       		.uleb128 0x9
+ 1131 0444 82000000 		.4byte	.LVL48
+ 1132 0448 F5050000 		.4byte	0x5f5
+ 1133 044c 07       		.uleb128 0x7
+ 1134 044d 88000000 		.4byte	.LVL49
+ 1135 0451 D4050000 		.4byte	0x5d4
+ 1136 0455 5F040000 		.4byte	0x45f
+ 1137 0459 08       		.uleb128 0x8
+ 1138 045a 01       		.uleb128 0x1
+ 1139 045b 50       		.byte	0x50
+ 1140 045c 01       		.uleb128 0x1
+ 1141 045d 30       		.byte	0x30
+ 1142 045e 00       		.byte	0
+ 1143 045f 07       		.uleb128 0x7
+ 1144 0460 94000000 		.4byte	.LVL50
+ 1145 0464 12010000 		.4byte	0x112
+ 1146 0468 72040000 		.4byte	0x472
+ 1147 046c 08       		.uleb128 0x8
+ 1148 046d 01       		.uleb128 0x1
+ 1149 046e 50       		.byte	0x50
+ 1150 046f 01       		.uleb128 0x1
+ 1151 0470 30       		.byte	0x30
+ 1152 0471 00       		.byte	0
+ 1153 0472 09       		.uleb128 0x9
+ 1154 0473 CC000000 		.4byte	.LVL55
+ 1155 0477 C9050000 		.4byte	0x5c9
+ 1156 047b 00       		.byte	0
+ 1157 047c 13       		.uleb128 0x13
+ 1158 047d B3010000 		.4byte	.LASF23
+ 1159 0481 04       		.byte	0x4
+ 1160 0482 1207     		.2byte	0x712
+ 1161 0484 88040000 		.4byte	0x488
+ 1162 0488 14       		.uleb128 0x14
+ 1163 0489 76000000 		.4byte	0x76
+ 1164 048d 15       		.uleb128 0x15
+ 1165 048e 12000000 		.4byte	.LASF24
+ 1166 0492 01       		.byte	0x1
+ 1167 0493 18       		.byte	0x18
+ 1168 0494 9E040000 		.4byte	0x49e
+ 1169 0498 05       		.uleb128 0x5
+ 1170 0499 03       		.byte	0x3
+ 1171 049a 00000000 		.4byte	state
+ 1172 049e 14       		.uleb128 0x14
+ 1173 049f 68000000 		.4byte	0x68
+ 1174 04a3 15       		.uleb128 0x15
+ 1175 04a4 96020000 		.4byte	.LASF25
+ 1176 04a8 01       		.byte	0x1
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 25
+
+
+ 1177 04a9 19       		.byte	0x19
+ 1178 04aa 9E040000 		.4byte	0x49e
+ 1179 04ae 05       		.uleb128 0x5
+ 1180 04af 03       		.byte	0x3
+ 1181 04b0 00000000 		.4byte	time
+ 1182 04b4 15       		.uleb128 0x15
+ 1183 04b5 C0010000 		.4byte	.LASF26
+ 1184 04b9 01       		.byte	0x1
+ 1185 04ba 1A       		.byte	0x1a
+ 1186 04bb 9E040000 		.4byte	0x49e
+ 1187 04bf 05       		.uleb128 0x5
+ 1188 04c0 03       		.byte	0x3
+ 1189 04c1 00000000 		.4byte	timeout_flag
+ 1190 04c5 15       		.uleb128 0x15
+ 1191 04c6 3F000000 		.4byte	.LASF27
+ 1192 04ca 01       		.byte	0x1
+ 1193 04cb 1B       		.byte	0x1b
+ 1194 04cc 9E040000 		.4byte	0x49e
+ 1195 04d0 05       		.uleb128 0x5
+ 1196 04d1 03       		.byte	0x3
+ 1197 04d2 00000000 		.4byte	points
+ 1198 04d6 15       		.uleb128 0x15
+ 1199 04d7 11040000 		.4byte	.LASF28
+ 1200 04db 01       		.byte	0x1
+ 1201 04dc 1C       		.byte	0x1c
+ 1202 04dd 9E040000 		.4byte	0x49e
+ 1203 04e1 05       		.uleb128 0x5
+ 1204 04e2 03       		.byte	0x3
+ 1205 04e3 00000000 		.4byte	finished
+ 1206 04e7 15       		.uleb128 0x15
+ 1207 04e8 85000000 		.4byte	.LASF29
+ 1208 04ec 01       		.byte	0x1
+ 1209 04ed 1D       		.byte	0x1d
+ 1210 04ee 68000000 		.4byte	0x68
+ 1211 04f2 05       		.uleb128 0x5
+ 1212 04f3 03       		.byte	0x3
+ 1213 04f4 00000000 		.4byte	active_target
+ 1214 04f8 16       		.uleb128 0x16
+ 1215 04f9 1A040000 		.4byte	.LASF30
+ 1216 04fd 1A040000 		.4byte	.LASF30
+ 1217 0501 05       		.byte	0x5
+ 1218 0502 E7       		.byte	0xe7
+ 1219 0503 16       		.uleb128 0x16
+ 1220 0504 AB030000 		.4byte	.LASF31
+ 1221 0508 AB030000 		.4byte	.LASF31
+ 1222 050c 06       		.byte	0x6
+ 1223 050d 8B       		.byte	0x8b
+ 1224 050e 16       		.uleb128 0x16
+ 1225 050f DC030000 		.4byte	.LASF32
+ 1226 0513 DC030000 		.4byte	.LASF32
+ 1227 0517 07       		.byte	0x7
+ 1228 0518 5E       		.byte	0x5e
+ 1229 0519 16       		.uleb128 0x16
+ 1230 051a EF020000 		.4byte	.LASF33
+ 1231 051e EF020000 		.4byte	.LASF33
+ 1232 0522 08       		.byte	0x8
+ 1233 0523 26       		.byte	0x26
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 26
+
+
+ 1234 0524 16       		.uleb128 0x16
+ 1235 0525 BD030000 		.4byte	.LASF34
+ 1236 0529 BD030000 		.4byte	.LASF34
+ 1237 052d 09       		.byte	0x9
+ 1238 052e 26       		.byte	0x26
+ 1239 052f 16       		.uleb128 0x16
+ 1240 0530 8E030000 		.4byte	.LASF35
+ 1241 0534 8E030000 		.4byte	.LASF35
+ 1242 0538 0A       		.byte	0xa
+ 1243 0539 26       		.byte	0x26
+ 1244 053a 16       		.uleb128 0x16
+ 1245 053b 59030000 		.4byte	.LASF36
+ 1246 053f 59030000 		.4byte	.LASF36
+ 1247 0543 0B       		.byte	0xb
+ 1248 0544 5E       		.byte	0x5e
+ 1249 0545 16       		.uleb128 0x16
+ 1250 0546 FD030000 		.4byte	.LASF37
+ 1251 054a FD030000 		.4byte	.LASF37
+ 1252 054e 0B       		.byte	0xb
+ 1253 054f 5B       		.byte	0x5b
+ 1254 0550 16       		.uleb128 0x16
+ 1255 0551 A0000000 		.4byte	.LASF38
+ 1256 0555 A0000000 		.4byte	.LASF38
+ 1257 0559 0C       		.byte	0xc
+ 1258 055a 29       		.byte	0x29
+ 1259 055b 16       		.uleb128 0x16
+ 1260 055c FF010000 		.4byte	.LASF39
+ 1261 0560 FF010000 		.4byte	.LASF39
+ 1262 0564 0D       		.byte	0xd
+ 1263 0565 29       		.byte	0x29
+ 1264 0566 16       		.uleb128 0x16
+ 1265 0567 9B020000 		.4byte	.LASF40
+ 1266 056b 9B020000 		.4byte	.LASF40
+ 1267 056f 0E       		.byte	0xe
+ 1268 0570 29       		.byte	0x29
+ 1269 0571 16       		.uleb128 0x16
+ 1270 0572 62010000 		.4byte	.LASF41
+ 1271 0576 62010000 		.4byte	.LASF41
+ 1272 057a 0B       		.byte	0xb
+ 1273 057b 8A       		.byte	0x8a
+ 1274 057c 16       		.uleb128 0x16
+ 1275 057d 7B030000 		.4byte	.LASF42
+ 1276 0581 7B030000 		.4byte	.LASF42
+ 1277 0585 07       		.byte	0x7
+ 1278 0586 8A       		.byte	0x8a
+ 1279 0587 16       		.uleb128 0x16
+ 1280 0588 4B020000 		.4byte	.LASF43
+ 1281 058c 4B020000 		.4byte	.LASF43
+ 1282 0590 06       		.byte	0x6
+ 1283 0591 54       		.byte	0x54
+ 1284 0592 16       		.uleb128 0x16
+ 1285 0593 22000000 		.4byte	.LASF44
+ 1286 0597 22000000 		.4byte	.LASF44
+ 1287 059b 0F       		.byte	0xf
+ 1288 059c 18       		.byte	0x18
+ 1289 059d 16       		.uleb128 0x16
+ 1290 059e 46000000 		.4byte	.LASF45
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 27
+
+
+ 1291 05a2 46000000 		.4byte	.LASF45
+ 1292 05a6 10       		.byte	0x10
+ 1293 05a7 18       		.byte	0x18
+ 1294 05a8 16       		.uleb128 0x16
+ 1295 05a9 66020000 		.4byte	.LASF46
+ 1296 05ad 66020000 		.4byte	.LASF46
+ 1297 05b1 11       		.byte	0x11
+ 1298 05b2 1F       		.byte	0x1f
+ 1299 05b3 16       		.uleb128 0x16
+ 1300 05b4 DD010000 		.4byte	.LASF47
+ 1301 05b8 DD010000 		.4byte	.LASF47
+ 1302 05bc 11       		.byte	0x11
+ 1303 05bd 23       		.byte	0x23
+ 1304 05be 16       		.uleb128 0x16
+ 1305 05bf 35020000 		.4byte	.LASF48
+ 1306 05c3 35020000 		.4byte	.LASF48
+ 1307 05c7 11       		.byte	0x11
+ 1308 05c8 21       		.byte	0x21
+ 1309 05c9 16       		.uleb128 0x16
+ 1310 05ca CD010000 		.4byte	.LASF49
+ 1311 05ce CD010000 		.4byte	.LASF49
+ 1312 05d2 06       		.byte	0x6
+ 1313 05d3 71       		.byte	0x71
+ 1314 05d4 16       		.uleb128 0x16
+ 1315 05d5 08000000 		.4byte	.LASF50
+ 1316 05d9 08000000 		.4byte	.LASF50
+ 1317 05dd 12       		.byte	0x12
+ 1318 05de 26       		.byte	0x26
+ 1319 05df 16       		.uleb128 0x16
+ 1320 05e0 B2000000 		.4byte	.LASF51
+ 1321 05e4 B2000000 		.4byte	.LASF51
+ 1322 05e8 07       		.byte	0x7
+ 1323 05e9 5A       		.byte	0x5a
+ 1324 05ea 16       		.uleb128 0x16
+ 1325 05eb 20020000 		.4byte	.LASF52
+ 1326 05ef 20020000 		.4byte	.LASF52
+ 1327 05f3 0B       		.byte	0xb
+ 1328 05f4 5A       		.byte	0x5a
+ 1329 05f5 16       		.uleb128 0x16
+ 1330 05f6 61000000 		.4byte	.LASF53
+ 1331 05fa 61000000 		.4byte	.LASF53
+ 1332 05fe 07       		.byte	0x7
+ 1333 05ff 5B       		.byte	0x5b
+ 1334 0600 00       		.byte	0
+ 1335              		.section	.debug_abbrev,"",%progbits
+ 1336              	.Ldebug_abbrev0:
+ 1337 0000 01       		.uleb128 0x1
+ 1338 0001 11       		.uleb128 0x11
+ 1339 0002 01       		.byte	0x1
+ 1340 0003 25       		.uleb128 0x25
+ 1341 0004 0E       		.uleb128 0xe
+ 1342 0005 13       		.uleb128 0x13
+ 1343 0006 0B       		.uleb128 0xb
+ 1344 0007 03       		.uleb128 0x3
+ 1345 0008 0E       		.uleb128 0xe
+ 1346 0009 1B       		.uleb128 0x1b
+ 1347 000a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 28
+
+
+ 1348 000b 55       		.uleb128 0x55
+ 1349 000c 17       		.uleb128 0x17
+ 1350 000d 11       		.uleb128 0x11
+ 1351 000e 01       		.uleb128 0x1
+ 1352 000f 10       		.uleb128 0x10
+ 1353 0010 17       		.uleb128 0x17
+ 1354 0011 00       		.byte	0
+ 1355 0012 00       		.byte	0
+ 1356 0013 02       		.uleb128 0x2
+ 1357 0014 24       		.uleb128 0x24
+ 1358 0015 00       		.byte	0
+ 1359 0016 0B       		.uleb128 0xb
+ 1360 0017 0B       		.uleb128 0xb
+ 1361 0018 3E       		.uleb128 0x3e
+ 1362 0019 0B       		.uleb128 0xb
+ 1363 001a 03       		.uleb128 0x3
+ 1364 001b 0E       		.uleb128 0xe
+ 1365 001c 00       		.byte	0
+ 1366 001d 00       		.byte	0
+ 1367 001e 03       		.uleb128 0x3
+ 1368 001f 16       		.uleb128 0x16
+ 1369 0020 00       		.byte	0
+ 1370 0021 03       		.uleb128 0x3
+ 1371 0022 0E       		.uleb128 0xe
+ 1372 0023 3A       		.uleb128 0x3a
+ 1373 0024 0B       		.uleb128 0xb
+ 1374 0025 3B       		.uleb128 0x3b
+ 1375 0026 0B       		.uleb128 0xb
+ 1376 0027 49       		.uleb128 0x49
+ 1377 0028 13       		.uleb128 0x13
+ 1378 0029 00       		.byte	0
+ 1379 002a 00       		.byte	0
+ 1380 002b 04       		.uleb128 0x4
+ 1381 002c 24       		.uleb128 0x24
+ 1382 002d 00       		.byte	0
+ 1383 002e 0B       		.uleb128 0xb
+ 1384 002f 0B       		.uleb128 0xb
+ 1385 0030 3E       		.uleb128 0x3e
+ 1386 0031 0B       		.uleb128 0xb
+ 1387 0032 03       		.uleb128 0x3
+ 1388 0033 08       		.uleb128 0x8
+ 1389 0034 00       		.byte	0
+ 1390 0035 00       		.byte	0
+ 1391 0036 05       		.uleb128 0x5
+ 1392 0037 2E       		.uleb128 0x2e
+ 1393 0038 01       		.byte	0x1
+ 1394 0039 3F       		.uleb128 0x3f
+ 1395 003a 19       		.uleb128 0x19
+ 1396 003b 03       		.uleb128 0x3
+ 1397 003c 0E       		.uleb128 0xe
+ 1398 003d 3A       		.uleb128 0x3a
+ 1399 003e 0B       		.uleb128 0xb
+ 1400 003f 3B       		.uleb128 0x3b
+ 1401 0040 0B       		.uleb128 0xb
+ 1402 0041 27       		.uleb128 0x27
+ 1403 0042 19       		.uleb128 0x19
+ 1404 0043 11       		.uleb128 0x11
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 29
+
+
+ 1405 0044 01       		.uleb128 0x1
+ 1406 0045 12       		.uleb128 0x12
+ 1407 0046 06       		.uleb128 0x6
+ 1408 0047 40       		.uleb128 0x40
+ 1409 0048 18       		.uleb128 0x18
+ 1410 0049 9742     		.uleb128 0x2117
+ 1411 004b 19       		.uleb128 0x19
+ 1412 004c 01       		.uleb128 0x1
+ 1413 004d 13       		.uleb128 0x13
+ 1414 004e 00       		.byte	0
+ 1415 004f 00       		.byte	0
+ 1416 0050 06       		.uleb128 0x6
+ 1417 0051 34       		.uleb128 0x34
+ 1418 0052 00       		.byte	0
+ 1419 0053 03       		.uleb128 0x3
+ 1420 0054 0E       		.uleb128 0xe
+ 1421 0055 3A       		.uleb128 0x3a
+ 1422 0056 0B       		.uleb128 0xb
+ 1423 0057 3B       		.uleb128 0x3b
+ 1424 0058 0B       		.uleb128 0xb
+ 1425 0059 49       		.uleb128 0x49
+ 1426 005a 13       		.uleb128 0x13
+ 1427 005b 02       		.uleb128 0x2
+ 1428 005c 18       		.uleb128 0x18
+ 1429 005d 00       		.byte	0
+ 1430 005e 00       		.byte	0
+ 1431 005f 07       		.uleb128 0x7
+ 1432 0060 898201   		.uleb128 0x4109
+ 1433 0063 01       		.byte	0x1
+ 1434 0064 11       		.uleb128 0x11
+ 1435 0065 01       		.uleb128 0x1
+ 1436 0066 31       		.uleb128 0x31
+ 1437 0067 13       		.uleb128 0x13
+ 1438 0068 01       		.uleb128 0x1
+ 1439 0069 13       		.uleb128 0x13
+ 1440 006a 00       		.byte	0
+ 1441 006b 00       		.byte	0
+ 1442 006c 08       		.uleb128 0x8
+ 1443 006d 8A8201   		.uleb128 0x410a
+ 1444 0070 00       		.byte	0
+ 1445 0071 02       		.uleb128 0x2
+ 1446 0072 18       		.uleb128 0x18
+ 1447 0073 9142     		.uleb128 0x2111
+ 1448 0075 18       		.uleb128 0x18
+ 1449 0076 00       		.byte	0
+ 1450 0077 00       		.byte	0
+ 1451 0078 09       		.uleb128 0x9
+ 1452 0079 898201   		.uleb128 0x4109
+ 1453 007c 00       		.byte	0
+ 1454 007d 11       		.uleb128 0x11
+ 1455 007e 01       		.uleb128 0x1
+ 1456 007f 31       		.uleb128 0x31
+ 1457 0080 13       		.uleb128 0x13
+ 1458 0081 00       		.byte	0
+ 1459 0082 00       		.byte	0
+ 1460 0083 0A       		.uleb128 0xa
+ 1461 0084 01       		.uleb128 0x1
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 30
+
+
+ 1462 0085 01       		.byte	0x1
+ 1463 0086 49       		.uleb128 0x49
+ 1464 0087 13       		.uleb128 0x13
+ 1465 0088 01       		.uleb128 0x1
+ 1466 0089 13       		.uleb128 0x13
+ 1467 008a 00       		.byte	0
+ 1468 008b 00       		.byte	0
+ 1469 008c 0B       		.uleb128 0xb
+ 1470 008d 21       		.uleb128 0x21
+ 1471 008e 00       		.byte	0
+ 1472 008f 49       		.uleb128 0x49
+ 1473 0090 13       		.uleb128 0x13
+ 1474 0091 2F       		.uleb128 0x2f
+ 1475 0092 0B       		.uleb128 0xb
+ 1476 0093 00       		.byte	0
+ 1477 0094 00       		.byte	0
+ 1478 0095 0C       		.uleb128 0xc
+ 1479 0096 05       		.uleb128 0x5
+ 1480 0097 00       		.byte	0
+ 1481 0098 03       		.uleb128 0x3
+ 1482 0099 08       		.uleb128 0x8
+ 1483 009a 3A       		.uleb128 0x3a
+ 1484 009b 0B       		.uleb128 0xb
+ 1485 009c 3B       		.uleb128 0x3b
+ 1486 009d 0B       		.uleb128 0xb
+ 1487 009e 49       		.uleb128 0x49
+ 1488 009f 13       		.uleb128 0x13
+ 1489 00a0 02       		.uleb128 0x2
+ 1490 00a1 17       		.uleb128 0x17
+ 1491 00a2 00       		.byte	0
+ 1492 00a3 00       		.byte	0
+ 1493 00a4 0D       		.uleb128 0xd
+ 1494 00a5 898201   		.uleb128 0x4109
+ 1495 00a8 01       		.byte	0x1
+ 1496 00a9 11       		.uleb128 0x11
+ 1497 00aa 01       		.uleb128 0x1
+ 1498 00ab 31       		.uleb128 0x31
+ 1499 00ac 13       		.uleb128 0x13
+ 1500 00ad 00       		.byte	0
+ 1501 00ae 00       		.byte	0
+ 1502 00af 0E       		.uleb128 0xe
+ 1503 00b0 34       		.uleb128 0x34
+ 1504 00b1 00       		.byte	0
+ 1505 00b2 03       		.uleb128 0x3
+ 1506 00b3 0E       		.uleb128 0xe
+ 1507 00b4 3A       		.uleb128 0x3a
+ 1508 00b5 0B       		.uleb128 0xb
+ 1509 00b6 3B       		.uleb128 0x3b
+ 1510 00b7 0B       		.uleb128 0xb
+ 1511 00b8 49       		.uleb128 0x49
+ 1512 00b9 13       		.uleb128 0x13
+ 1513 00ba 02       		.uleb128 0x2
+ 1514 00bb 17       		.uleb128 0x17
+ 1515 00bc 00       		.byte	0
+ 1516 00bd 00       		.byte	0
+ 1517 00be 0F       		.uleb128 0xf
+ 1518 00bf 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 31
+
+
+ 1519 00c0 01       		.byte	0x1
+ 1520 00c1 3F       		.uleb128 0x3f
+ 1521 00c2 19       		.uleb128 0x19
+ 1522 00c3 03       		.uleb128 0x3
+ 1523 00c4 0E       		.uleb128 0xe
+ 1524 00c5 3A       		.uleb128 0x3a
+ 1525 00c6 0B       		.uleb128 0xb
+ 1526 00c7 3B       		.uleb128 0x3b
+ 1527 00c8 0B       		.uleb128 0xb
+ 1528 00c9 49       		.uleb128 0x49
+ 1529 00ca 13       		.uleb128 0x13
+ 1530 00cb 11       		.uleb128 0x11
+ 1531 00cc 01       		.uleb128 0x1
+ 1532 00cd 12       		.uleb128 0x12
+ 1533 00ce 06       		.uleb128 0x6
+ 1534 00cf 40       		.uleb128 0x40
+ 1535 00d0 18       		.uleb128 0x18
+ 1536 00d1 9742     		.uleb128 0x2117
+ 1537 00d3 19       		.uleb128 0x19
+ 1538 00d4 01       		.uleb128 0x1
+ 1539 00d5 13       		.uleb128 0x13
+ 1540 00d6 00       		.byte	0
+ 1541 00d7 00       		.byte	0
+ 1542 00d8 10       		.uleb128 0x10
+ 1543 00d9 2E       		.uleb128 0x2e
+ 1544 00da 01       		.byte	0x1
+ 1545 00db 3F       		.uleb128 0x3f
+ 1546 00dc 19       		.uleb128 0x19
+ 1547 00dd 03       		.uleb128 0x3
+ 1548 00de 0E       		.uleb128 0xe
+ 1549 00df 3A       		.uleb128 0x3a
+ 1550 00e0 0B       		.uleb128 0xb
+ 1551 00e1 3B       		.uleb128 0x3b
+ 1552 00e2 0B       		.uleb128 0xb
+ 1553 00e3 11       		.uleb128 0x11
+ 1554 00e4 01       		.uleb128 0x1
+ 1555 00e5 12       		.uleb128 0x12
+ 1556 00e6 06       		.uleb128 0x6
+ 1557 00e7 40       		.uleb128 0x40
+ 1558 00e8 18       		.uleb128 0x18
+ 1559 00e9 9742     		.uleb128 0x2117
+ 1560 00eb 19       		.uleb128 0x19
+ 1561 00ec 01       		.uleb128 0x1
+ 1562 00ed 13       		.uleb128 0x13
+ 1563 00ee 00       		.byte	0
+ 1564 00ef 00       		.byte	0
+ 1565 00f0 11       		.uleb128 0x11
+ 1566 00f1 2E       		.uleb128 0x2e
+ 1567 00f2 01       		.byte	0x1
+ 1568 00f3 3F       		.uleb128 0x3f
+ 1569 00f4 19       		.uleb128 0x19
+ 1570 00f5 03       		.uleb128 0x3
+ 1571 00f6 0E       		.uleb128 0xe
+ 1572 00f7 3A       		.uleb128 0x3a
+ 1573 00f8 0B       		.uleb128 0xb
+ 1574 00f9 3B       		.uleb128 0x3b
+ 1575 00fa 0B       		.uleb128 0xb
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 32
+
+
+ 1576 00fb 27       		.uleb128 0x27
+ 1577 00fc 19       		.uleb128 0x19
+ 1578 00fd 49       		.uleb128 0x49
+ 1579 00fe 13       		.uleb128 0x13
+ 1580 00ff 8701     		.uleb128 0x87
+ 1581 0101 19       		.uleb128 0x19
+ 1582 0102 11       		.uleb128 0x11
+ 1583 0103 01       		.uleb128 0x1
+ 1584 0104 12       		.uleb128 0x12
+ 1585 0105 06       		.uleb128 0x6
+ 1586 0106 40       		.uleb128 0x40
+ 1587 0107 18       		.uleb128 0x18
+ 1588 0108 9742     		.uleb128 0x2117
+ 1589 010a 19       		.uleb128 0x19
+ 1590 010b 01       		.uleb128 0x1
+ 1591 010c 13       		.uleb128 0x13
+ 1592 010d 00       		.byte	0
+ 1593 010e 00       		.byte	0
+ 1594 010f 12       		.uleb128 0x12
+ 1595 0110 0B       		.uleb128 0xb
+ 1596 0111 01       		.byte	0x1
+ 1597 0112 11       		.uleb128 0x11
+ 1598 0113 01       		.uleb128 0x1
+ 1599 0114 12       		.uleb128 0x12
+ 1600 0115 06       		.uleb128 0x6
+ 1601 0116 01       		.uleb128 0x1
+ 1602 0117 13       		.uleb128 0x13
+ 1603 0118 00       		.byte	0
+ 1604 0119 00       		.byte	0
+ 1605 011a 13       		.uleb128 0x13
+ 1606 011b 34       		.uleb128 0x34
+ 1607 011c 00       		.byte	0
+ 1608 011d 03       		.uleb128 0x3
+ 1609 011e 0E       		.uleb128 0xe
+ 1610 011f 3A       		.uleb128 0x3a
+ 1611 0120 0B       		.uleb128 0xb
+ 1612 0121 3B       		.uleb128 0x3b
+ 1613 0122 05       		.uleb128 0x5
+ 1614 0123 49       		.uleb128 0x49
+ 1615 0124 13       		.uleb128 0x13
+ 1616 0125 3F       		.uleb128 0x3f
+ 1617 0126 19       		.uleb128 0x19
+ 1618 0127 3C       		.uleb128 0x3c
+ 1619 0128 19       		.uleb128 0x19
+ 1620 0129 00       		.byte	0
+ 1621 012a 00       		.byte	0
+ 1622 012b 14       		.uleb128 0x14
+ 1623 012c 35       		.uleb128 0x35
+ 1624 012d 00       		.byte	0
+ 1625 012e 49       		.uleb128 0x49
+ 1626 012f 13       		.uleb128 0x13
+ 1627 0130 00       		.byte	0
+ 1628 0131 00       		.byte	0
+ 1629 0132 15       		.uleb128 0x15
+ 1630 0133 34       		.uleb128 0x34
+ 1631 0134 00       		.byte	0
+ 1632 0135 03       		.uleb128 0x3
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 33
+
+
+ 1633 0136 0E       		.uleb128 0xe
+ 1634 0137 3A       		.uleb128 0x3a
+ 1635 0138 0B       		.uleb128 0xb
+ 1636 0139 3B       		.uleb128 0x3b
+ 1637 013a 0B       		.uleb128 0xb
+ 1638 013b 49       		.uleb128 0x49
+ 1639 013c 13       		.uleb128 0x13
+ 1640 013d 3F       		.uleb128 0x3f
+ 1641 013e 19       		.uleb128 0x19
+ 1642 013f 02       		.uleb128 0x2
+ 1643 0140 18       		.uleb128 0x18
+ 1644 0141 00       		.byte	0
+ 1645 0142 00       		.byte	0
+ 1646 0143 16       		.uleb128 0x16
+ 1647 0144 2E       		.uleb128 0x2e
+ 1648 0145 00       		.byte	0
+ 1649 0146 3F       		.uleb128 0x3f
+ 1650 0147 19       		.uleb128 0x19
+ 1651 0148 3C       		.uleb128 0x3c
+ 1652 0149 19       		.uleb128 0x19
+ 1653 014a 6E       		.uleb128 0x6e
+ 1654 014b 0E       		.uleb128 0xe
+ 1655 014c 03       		.uleb128 0x3
+ 1656 014d 0E       		.uleb128 0xe
+ 1657 014e 3A       		.uleb128 0x3a
+ 1658 014f 0B       		.uleb128 0xb
+ 1659 0150 3B       		.uleb128 0x3b
+ 1660 0151 0B       		.uleb128 0xb
+ 1661 0152 00       		.byte	0
+ 1662 0153 00       		.byte	0
+ 1663 0154 00       		.byte	0
+ 1664              		.section	.debug_loc,"",%progbits
+ 1665              	.Ldebug_loc0:
+ 1666              	.LLST0:
+ 1667 0000 00000000 		.4byte	.LVL3
+ 1668 0004 16000000 		.4byte	.LVL4
+ 1669 0008 0100     		.2byte	0x1
+ 1670 000a 50       		.byte	0x50
+ 1671 000b 16000000 		.4byte	.LVL4
+ 1672 000f 1C000000 		.4byte	.LVL6
+ 1673 0013 0100     		.2byte	0x1
+ 1674 0015 54       		.byte	0x54
+ 1675 0016 1C000000 		.4byte	.LVL6
+ 1676 001a 1E000000 		.4byte	.LVL7
+ 1677 001e 0100     		.2byte	0x1
+ 1678 0020 50       		.byte	0x50
+ 1679 0021 1E000000 		.4byte	.LVL7
+ 1680 0025 24000000 		.4byte	.LVL9
+ 1681 0029 0100     		.2byte	0x1
+ 1682 002b 54       		.byte	0x54
+ 1683 002c 24000000 		.4byte	.LVL9
+ 1684 0030 26000000 		.4byte	.LVL10
+ 1685 0034 0100     		.2byte	0x1
+ 1686 0036 50       		.byte	0x50
+ 1687 0037 26000000 		.4byte	.LVL10
+ 1688 003b 52000000 		.4byte	.LVL17
+ 1689 003f 0100     		.2byte	0x1
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 34
+
+
+ 1690 0041 54       		.byte	0x54
+ 1691 0042 52000000 		.4byte	.LVL17
+ 1692 0046 58000000 		.4byte	.LFE66
+ 1693 004a 0400     		.2byte	0x4
+ 1694 004c F3       		.byte	0xf3
+ 1695 004d 01       		.uleb128 0x1
+ 1696 004e 50       		.byte	0x50
+ 1697 004f 9F       		.byte	0x9f
+ 1698 0050 00000000 		.4byte	0
+ 1699 0054 00000000 		.4byte	0
+ 1700              	.LLST1:
+ 1701 0058 20000000 		.4byte	.LVL21
+ 1702 005c 2D000000 		.4byte	.LVL24-1
+ 1703 0060 0100     		.2byte	0x1
+ 1704 0062 50       		.byte	0x50
+ 1705 0063 00000000 		.4byte	0
+ 1706 0067 00000000 		.4byte	0
+ 1707              	.LLST2:
+ 1708 006b 14000000 		.4byte	.LVL38
+ 1709 006f 18000000 		.4byte	.LVL39
+ 1710 0073 0100     		.2byte	0x1
+ 1711 0075 50       		.byte	0x50
+ 1712 0076 18000000 		.4byte	.LVL39
+ 1713 007a 1B000000 		.4byte	.LVL40-1
+ 1714 007e 0100     		.2byte	0x1
+ 1715 0080 52       		.byte	0x52
+ 1716 0081 1B000000 		.4byte	.LVL40-1
+ 1717 0085 00010000 		.4byte	.LFE69
+ 1718 0089 0100     		.2byte	0x1
+ 1719 008b 54       		.byte	0x54
+ 1720 008c 00000000 		.4byte	0
+ 1721 0090 00000000 		.4byte	0
+ 1722              	.LLST3:
+ 1723 0094 A2000000 		.4byte	.LVL51
+ 1724 0098 B0000000 		.4byte	.LVL52
+ 1725 009c 0100     		.2byte	0x1
+ 1726 009e 50       		.byte	0x50
+ 1727 009f 00000000 		.4byte	0
+ 1728 00a3 00000000 		.4byte	0
+ 1729              		.section	.debug_aranges,"",%progbits
+ 1730 0000 44000000 		.4byte	0x44
+ 1731 0004 0200     		.2byte	0x2
+ 1732 0006 00000000 		.4byte	.Ldebug_info0
+ 1733 000a 04       		.byte	0x4
+ 1734 000b 00       		.byte	0
+ 1735 000c 0000     		.2byte	0
+ 1736 000e 0000     		.2byte	0
+ 1737 0010 00000000 		.4byte	.LFB64
+ 1738 0014 30000000 		.4byte	.LFE64-.LFB64
+ 1739 0018 00000000 		.4byte	.LFB66
+ 1740 001c 58000000 		.4byte	.LFE66-.LFB66
+ 1741 0020 00000000 		.4byte	.LFB65
+ 1742 0024 3C000000 		.4byte	.LFE65-.LFB65
+ 1743 0028 00000000 		.4byte	.LFB67
+ 1744 002c 40000000 		.4byte	.LFE67-.LFB67
+ 1745 0030 00000000 		.4byte	.LFB68
+ 1746 0034 38000000 		.4byte	.LFE68-.LFB68
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 35
+
+
+ 1747 0038 00000000 		.4byte	.LFB69
+ 1748 003c 00010000 		.4byte	.LFE69-.LFB69
+ 1749 0040 00000000 		.4byte	0
+ 1750 0044 00000000 		.4byte	0
+ 1751              		.section	.debug_ranges,"",%progbits
+ 1752              	.Ldebug_ranges0:
+ 1753 0000 00000000 		.4byte	.LFB64
+ 1754 0004 30000000 		.4byte	.LFE64
+ 1755 0008 00000000 		.4byte	.LFB66
+ 1756 000c 58000000 		.4byte	.LFE66
+ 1757 0010 00000000 		.4byte	.LFB65
+ 1758 0014 3C000000 		.4byte	.LFE65
+ 1759 0018 00000000 		.4byte	.LFB67
+ 1760 001c 40000000 		.4byte	.LFE67
+ 1761 0020 00000000 		.4byte	.LFB68
+ 1762 0024 38000000 		.4byte	.LFE68
+ 1763 0028 00000000 		.4byte	.LFB69
+ 1764 002c 00010000 		.4byte	.LFE69
+ 1765 0030 00000000 		.4byte	0
+ 1766 0034 00000000 		.4byte	0
+ 1767              		.section	.debug_line,"",%progbits
+ 1768              	.Ldebug_line0:
+ 1769 0000 4E030000 		.section	.debug_str,"MS",%progbits,1
+ 1769      02009002 
+ 1769      00000201 
+ 1769      FB0E0D00 
+ 1769      01010101 
+ 1770              	.LASF19:
+ 1771 0000 6D657373 		.ascii	"message\000"
+ 1771      61676500 
+ 1772              	.LASF50:
+ 1773 0008 4C45445F 		.ascii	"LED_Write\000"
+ 1773      57726974 
+ 1773      6500
+ 1774              	.LASF24:
+ 1775 0012 73746174 		.ascii	"state\000"
+ 1775      6500
+ 1776              	.LASF9:
+ 1777 0018 5F5F696E 		.ascii	"__int32_t\000"
+ 1777      7433325F 
+ 1777      7400
+ 1778              	.LASF44:
+ 1779 0022 4953525F 		.ascii	"ISR_One_Sec_StartEx\000"
+ 1779      4F6E655F 
+ 1779      5365635F 
+ 1779      53746172 
+ 1779      74457800 
+ 1780              	.LASF4:
+ 1781 0036 6C6F6E67 		.ascii	"long int\000"
+ 1781      20696E74 
+ 1781      00
+ 1782              	.LASF27:
+ 1783 003f 706F696E 		.ascii	"points\000"
+ 1783      747300
+ 1784              	.LASF45:
+ 1785 0046 4953525F 		.ascii	"ISR_Button_Timeout_StartEx\000"
+ 1785      42757474 
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 36
+
+
+ 1785      6F6E5F54 
+ 1785      696D656F 
+ 1785      75745F53 
+ 1786              	.LASF53:
+ 1787 0061 4F6E655F 		.ascii	"One_Sec_Timer_Stop\000"
+ 1787      5365635F 
+ 1787      54696D65 
+ 1787      725F5374 
+ 1787      6F7000
+ 1788              	.LASF2:
+ 1789 0074 73686F72 		.ascii	"short int\000"
+ 1789      7420696E 
+ 1789      7400
+ 1790              	.LASF12:
+ 1791 007e 646F7562 		.ascii	"double\000"
+ 1791      6C6500
+ 1792              	.LASF29:
+ 1793 0085 61637469 		.ascii	"active_target\000"
+ 1793      76655F74 
+ 1793      61726765 
+ 1793      7400
+ 1794              	.LASF20:
+ 1795 0093 74617267 		.ascii	"target\000"
+ 1795      657400
+ 1796              	.LASF11:
+ 1797 009a 666C6F61 		.ascii	"float\000"
+ 1797      7400
+ 1798              	.LASF38:
+ 1799 00a0 54617267 		.ascii	"Target_BTN_1_Read\000"
+ 1799      65745F42 
+ 1799      544E5F31 
+ 1799      5F526561 
+ 1799      6400
+ 1800              	.LASF51:
+ 1801 00b2 4F6E655F 		.ascii	"One_Sec_Timer_Start\000"
+ 1801      5365635F 
+ 1801      54696D65 
+ 1801      725F5374 
+ 1801      61727400 
+ 1802              	.LASF1:
+ 1803 00c6 756E7369 		.ascii	"unsigned char\000"
+ 1803      676E6564 
+ 1803      20636861 
+ 1803      7200
+ 1804              	.LASF54:
+ 1805 00d4 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1805      43313120 
+ 1805      352E342E 
+ 1805      31203230 
+ 1805      31363036 
+ 1806 0107 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1806      20726576 
+ 1806      6973696F 
+ 1806      6E203233 
+ 1806      37373135 
+ 1807 013a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1807      66756E63 
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 37
+
+
+ 1807      74696F6E 
+ 1807      2D736563 
+ 1807      74696F6E 
+ 1808              	.LASF41:
+ 1809 0162 4465626F 		.ascii	"Debounce_Timer_Init\000"
+ 1809      756E6365 
+ 1809      5F54696D 
+ 1809      65725F49 
+ 1809      6E697400 
+ 1810              	.LASF21:
+ 1811 0176 67657441 		.ascii	"getActiveTargetState\000"
+ 1811      63746976 
+ 1811      65546172 
+ 1811      67657453 
+ 1811      74617465 
+ 1812              	.LASF3:
+ 1813 018b 73686F72 		.ascii	"short unsigned int\000"
+ 1813      7420756E 
+ 1813      7369676E 
+ 1813      65642069 
+ 1813      6E7400
+ 1814              	.LASF57:
+ 1815 019e 496E6974 		.ascii	"Init\000"
+ 1815      00
+ 1816              	.LASF16:
+ 1817 01a3 4F6E655F 		.ascii	"One_Sec_Handler\000"
+ 1817      5365635F 
+ 1817      48616E64 
+ 1817      6C657200 
+ 1818              	.LASF23:
+ 1819 01b3 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1819      52784275 
+ 1819      66666572 
+ 1819      00
+ 1820              	.LASF26:
+ 1821 01c0 74696D65 		.ascii	"timeout_flag\000"
+ 1821      6F75745F 
+ 1821      666C6167 
+ 1821      00
+ 1822              	.LASF49:
+ 1823 01cd 55415254 		.ascii	"UART_BT_GetChar\000"
+ 1823      5F42545F 
+ 1823      47657443 
+ 1823      68617200 
+ 1824              	.LASF47:
+ 1825 01dd 45455052 		.ascii	"EEPROM_ReadByte\000"
+ 1825      4F4D5F52 
+ 1825      65616442 
+ 1825      79746500 
+ 1826              	.LASF5:
+ 1827 01ed 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1827      20756E73 
+ 1827      69676E65 
+ 1827      6420696E 
+ 1827      7400
+ 1828              	.LASF39:
+ 1829 01ff 54617267 		.ascii	"Target_BTN_2_Read\000"
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 38
+
+
+ 1829      65745F42 
+ 1829      544E5F32 
+ 1829      5F526561 
+ 1829      6400
+ 1830              	.LASF17:
+ 1831 0211 41637469 		.ascii	"ActivateTarget\000"
+ 1831      76617465 
+ 1831      54617267 
+ 1831      657400
+ 1832              	.LASF52:
+ 1833 0220 4465626F 		.ascii	"Debounce_Timer_Start\000"
+ 1833      756E6365 
+ 1833      5F54696D 
+ 1833      65725F53 
+ 1833      74617274 
+ 1834              	.LASF48:
+ 1835 0235 45455052 		.ascii	"EEPROM_WriteByte\000"
+ 1835      4F4D5F57 
+ 1835      72697465 
+ 1835      42797465 
+ 1835      00
+ 1836              	.LASF58:
+ 1837 0246 6D61696E 		.ascii	"main\000"
+ 1837      00
+ 1838              	.LASF43:
+ 1839 024b 55415254 		.ascii	"UART_BT_Start\000"
+ 1839      5F42545F 
+ 1839      53746172 
+ 1839      7400
+ 1840              	.LASF8:
+ 1841 0259 756E7369 		.ascii	"unsigned int\000"
+ 1841      676E6564 
+ 1841      20696E74 
+ 1841      00
+ 1842              	.LASF46:
+ 1843 0266 45455052 		.ascii	"EEPROM_Start\000"
+ 1843      4F4D5F53 
+ 1843      74617274 
+ 1843      00
+ 1844              	.LASF7:
+ 1845 0273 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1845      206C6F6E 
+ 1845      6720756E 
+ 1845      7369676E 
+ 1845      65642069 
+ 1846              	.LASF0:
+ 1847 028a 7369676E 		.ascii	"signed char\000"
+ 1847      65642063 
+ 1847      68617200 
+ 1848              	.LASF25:
+ 1849 0296 74696D65 		.ascii	"time\000"
+ 1849      00
+ 1850              	.LASF40:
+ 1851 029b 54617267 		.ascii	"Target_BTN_3_Read\000"
+ 1851      65745F42 
+ 1851      544E5F33 
+ 1851      5F526561 
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 39
+
+
+ 1851      6400
+ 1852              	.LASF10:
+ 1853 02ad 696E7433 		.ascii	"int32_t\000"
+ 1853      325F7400 
+ 1854              	.LASF15:
+ 1855 02b5 73697A65 		.ascii	"sizetype\000"
+ 1855      74797065 
+ 1855      00
+ 1856              	.LASF6:
+ 1857 02be 6C6F6E67 		.ascii	"long long int\000"
+ 1857      206C6F6E 
+ 1857      6720696E 
+ 1857      7400
+ 1858              	.LASF55:
+ 1859 02cc 6D61696E 		.ascii	"main.c\000"
+ 1859      2E6300
+ 1860              	.LASF13:
+ 1861 02d3 63686172 		.ascii	"char\000"
+ 1861      00
+ 1862              	.LASF18:
+ 1863 02d8 42757474 		.ascii	"Button_Timeout_Handler\000"
+ 1863      6F6E5F54 
+ 1863      696D656F 
+ 1863      75745F48 
+ 1863      616E646C 
+ 1864              	.LASF33:
+ 1865 02ef 54617267 		.ascii	"Target_LED_1_Write\000"
+ 1865      65745F4C 
+ 1865      45445F31 
+ 1865      5F577269 
+ 1865      746500
+ 1866              	.LASF56:
+ 1867 0302 433A5C55 		.ascii	"C:\\Users\\koppany\\Documents\\PSoC Creator\\PSoC8C"
+ 1867      73657273 
+ 1867      5C6B6F70 
+ 1867      70616E79 
+ 1867      5C446F63 
+ 1868 0330 4B49542D 		.ascii	"KIT-059\\a10_UART\\UART\\ShootingGame.cydsn\000"
+ 1868      3035395C 
+ 1868      6131305F 
+ 1868      55415254 
+ 1868      5C554152 
+ 1869              	.LASF36:
+ 1870 0359 4465626F 		.ascii	"Debounce_Timer_ReadStatusRegister\000"
+ 1870      756E6365 
+ 1870      5F54696D 
+ 1870      65725F52 
+ 1870      65616453 
+ 1871              	.LASF42:
+ 1872 037b 4F6E655F 		.ascii	"One_Sec_Timer_Init\000"
+ 1872      5365635F 
+ 1872      54696D65 
+ 1872      725F496E 
+ 1872      697400
+ 1873              	.LASF35:
+ 1874 038e 54617267 		.ascii	"Target_LED_3_Write\000"
+ 1874      65745F4C 
+ARM GAS  C:\Users\koppany\AppData\Local\Temp\ccsf4g9Q.s 			page 40
+
+
+ 1874      45445F33 
+ 1874      5F577269 
+ 1874      746500
+ 1875              	.LASF22:
+ 1876 03a1 68696768 		.ascii	"highScore\000"
+ 1876      53636F72 
+ 1876      6500
+ 1877              	.LASF31:
+ 1878 03ab 55415254 		.ascii	"UART_BT_PutString\000"
+ 1878      5F42545F 
+ 1878      50757453 
+ 1878      7472696E 
+ 1878      6700
+ 1879              	.LASF34:
+ 1880 03bd 54617267 		.ascii	"Target_LED_2_Write\000"
+ 1880      65745F4C 
+ 1880      45445F32 
+ 1880      5F577269 
+ 1880      746500
+ 1881              	.LASF14:
+ 1882 03d0 6C6F6E67 		.ascii	"long double\000"
+ 1882      20646F75 
+ 1882      626C6500 
+ 1883              	.LASF32:
+ 1884 03dc 4F6E655F 		.ascii	"One_Sec_Timer_ReadStatusRegister\000"
+ 1884      5365635F 
+ 1884      54696D65 
+ 1884      725F5265 
+ 1884      61645374 
+ 1885              	.LASF37:
+ 1886 03fd 4465626F 		.ascii	"Debounce_Timer_Stop\000"
+ 1886      756E6365 
+ 1886      5F54696D 
+ 1886      65725F53 
+ 1886      746F7000 
+ 1887              	.LASF28:
+ 1888 0411 66696E69 		.ascii	"finished\000"
+ 1888      73686564 
+ 1888      00
+ 1889              	.LASF30:
+ 1890 041a 73707269 		.ascii	"sprintf\000"
+ 1890      6E746600 
+ 1891              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

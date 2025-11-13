@@ -1,0 +1,6 @@
+C:\Users\koppany\Documents\uC\Shooting_Game\ShootingGame.cydsn\ShootingGame.cyprj|6fc5c5ea-1632-4365-a61f-b303469d4ead
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9c42aad6-b47a-410a-a416-aaa44ad862ec
+C:\Users\koppany\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|f8db17b7-42e8-4761-a2ae-3909e342bfaf
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|4aced334-551d-498c-8537-f0597b6afccb
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|528a46c2-4259-44e9-9587-6a3188c52cc7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|5e76e29f-dbc9-49fd-9538-d7c4d12f8c06

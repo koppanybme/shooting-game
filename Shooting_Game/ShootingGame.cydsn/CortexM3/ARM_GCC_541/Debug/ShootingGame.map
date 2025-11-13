@@ -1,0 +1,1631 @@
+Archive member included to satisfy reference by file (symbol)
+
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+                              .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o (CyHalt)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+                              .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o) (CyPmReadStatus)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (LED_Write)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (UART_BT_Start)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+                              .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o) (UART_BT_IntClock_Start)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Target_BTN_1_Read)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Target_LED_1_Write)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Target_BTN_2_Read)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Target_LED_2_Write)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Target_BTN_3_Read)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Target_LED_3_Write)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (ISR_One_Sec_StartEx)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (One_Sec_Timer_Stop)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Debounce_Timer_Stop)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (ISR_Button_Timeout_StartEx)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (EEPROM_Start)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyBootAsmGnu.o)
+                              .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o (CyDelayCycles)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+                              .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o) (dieTemperature)
+.\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+                              .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o) (CySpcStart)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                              .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o (__errno)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o (exit)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o) (_global_impure_ptr)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o (__libc_init_array)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+                              .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o (memcpy)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o (memset)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (sprintf)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o) (_svfprintf_r)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o) (_printf_i)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o) (memchr)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o) (memmove)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o) (_free_r)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o) (_malloc_r)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o) (_realloc_r)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o) (__malloc_lock)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o) (_malloc_usable_size_r)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o) (errno)
+
+Allocating common symbols
+Common symbol       size              file
+
+errno               0x4               c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+state               0x4               .\CortexM3\ARM_GCC_541\Debug\main.o
+dieTemperature      0x2               .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+ .data          0x00000000        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .text          0x00000000       0x74 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .ARM.exidx     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.SetAnalogRoutingPumps
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .text._exit    0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .bss           0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyUSB_PowerOnCheck
+                0x00000000       0x48 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyBusClk_Internal_SetDivider
+                0x00000000       0x48 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyPLL_OUT_Stop
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIMO_Stop
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIMO_EnableDoubler
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIMO_DisableDoubler
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyMasterClk_SetSource
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyMasterClk_SetDivider
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyBusClk_SetDivider
+                0x00000000       0x70 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyUsbClk_SetSource
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyILO_Start1K
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyILO_Stop1K
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyILO_Start100K
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyILO_Stop100K
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyPLL_OUT_Start
+                0x00000000       0x78 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIMO_Start
+                0x00000000       0x60 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyILO_Enable33K
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyILO_Disable33K
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyILO_SetSource
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyILO_SetPowerMode
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_32KHZ_Stop
+                0x00000000       0x30 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_32KHZ_ReadStatus
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_Start
+                0x00000000       0xac .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_Stop
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_EnableErrStatus
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_DisableErrStatus
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_ReadStatus
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_EnableFaultRecovery
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_DisableFaultRecovery
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_SetStartup
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_SetFbVoltage
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_SetWdVoltage
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyHalt   0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyPLL_OUT_SetPQ
+                0x00000000       0x60 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyPLL_OUT_SetSource
+                0x00000000       0x34 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIMO_SetTrimValue
+                0x00000000       0xcc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIMO_SetFreq
+                0x00000000       0xf4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIMO_SetSource
+                0x00000000       0x58 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySoftwareReset
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyDelay  0x00000000       0x2c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_32KHZ_SetPowerMode
+                0x00000000       0x84 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyXTAL_32KHZ_Start
+                0x00000000       0x74 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyDelayFreq
+                0x00000000       0x4c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyWdtStart
+                0x00000000       0x40 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyWdtClear
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyVdStickyStatus
+                0x00000000       0x2c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyVdLvDigitEnable
+                0x00000000       0x84 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyVdLvAnalogEnable
+                0x00000000       0x80 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyVdLvDigitDisable
+                0x00000000       0x30 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyVdLvAnalogDisable
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyVdHvAnalogEnable
+                0x00000000       0x54 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyVdHvAnalogDisable
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyVdRealTimeStatus
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyDisableInts
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyEnableInts
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyFlushCache
+                0x00000000       0x44 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIntSetSysVector
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIntGetSysVector
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIntSetVector
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIntGetVector
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIntSetPriority
+                0x00000000       0x30 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIntGetPriority
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyIntGetState
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickStop
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickEnableInterrupt
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickEnable
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickDisableInterrupt
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickSetReload
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickGetReload
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickGetValue
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickSetClockSource
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickGetClockSource
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickGetCountFlag
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickServiceCallbacks
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickClear
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickInit
+                0x00000000       0x58 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickStart
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickSetCallback
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CySysTickGetCallback
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text.CyGetUniqueId
+                0x00000000       0x70 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .bss           0x00000000       0x43 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmHibSlpSaveSet
+                0x00000000      0x1dc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmHibSlpRestore
+                0x00000000       0xd8 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmHviLviSaveDisable
+                0x00000000       0xa0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmHibSaveSet
+                0x00000000       0x98 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmHviLviRestore
+                0x00000000       0x48 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmHibRestore
+                0x00000000       0x60 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmSaveClocks
+                0x00000000      0x218 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmRestoreClocks
+                0x00000000      0x24c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmAltAct
+                0x00000000       0x6c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmSleep
+                0x00000000       0xf4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmHibernateEx
+                0x00000000       0xf4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmHibernate
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmReadStatus
+                0x00000000       0x30 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmCtwSetInterval
+                0x00000000       0x5c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmOppsSet
+                0x00000000       0x2c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text.CyPmFtwSetInterval
+                0x00000000       0x5c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .rodata        0x00000000        0xf .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .text.LED_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .text.LED_Read
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .text.LED_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_Stop
+                0x00000000       0x3c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_ReadControlRegister
+                0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_WriteControlRegister
+                0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_SetRxInterruptMode
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_ReadRxData
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_ReadRxStatus
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_GetByte
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_GetRxBufferSize
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_ClearRxBuffer
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_SetRxAddressMode
+                0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_SetRxAddress1
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_SetRxAddress2
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_SetTxInterruptMode
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_WriteTxData
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_ReadTxStatus
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_PutArray
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_PutCRLF
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_GetTxBufferSize
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_ClearTxBuffer
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_SendBreak
+                0x00000000       0x58 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text.UART_BT_SetTxAddressMode
+                0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .text.UART_BT_IntClock_Stop
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .text.UART_BT_IntClock_StopBlock
+                0x00000000       0x6c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .text.UART_BT_IntClock_StandbyPower
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .text.UART_BT_IntClock_GetDividerRegister
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .text.UART_BT_IntClock_SetModeRegister
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .text.UART_BT_IntClock_ClearModeRegister
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .text.UART_BT_IntClock_GetModeRegister
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .text.UART_BT_IntClock_GetSourceRegister
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .text.UART_BT_IntClock_SetDividerRegister
+                0x00000000       0xdc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .text.UART_BT_IntClock_SetSourceRegister
+                0x00000000       0x5c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .text.Target_BTN_1_Write
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .text.Target_BTN_1_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .text.Target_BTN_1_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .text.Target_LED_1_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .text.Target_LED_1_Read
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .text.Target_LED_1_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .text.Target_BTN_2_Write
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .text.Target_BTN_2_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .text.Target_BTN_2_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .text.Target_LED_2_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .text.Target_LED_2_Read
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .text.Target_LED_2_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .text.Target_BTN_3_Write
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .text.Target_BTN_3_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .text.Target_BTN_3_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .text.Target_LED_3_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .text.Target_LED_3_Read
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .text.Target_LED_3_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .text.ISR_One_Sec_Interrupt
+                0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .text.ISR_One_Sec_GetVector
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .text.ISR_One_Sec_GetPriority
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .text.ISR_One_Sec_GetState
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .text.ISR_One_Sec_Start
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .text.ISR_One_Sec_Stop
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .text.ISR_One_Sec_SetPending
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .text.ISR_One_Sec_ClearPending
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .text.One_Sec_Timer_SoftwareCapture
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .text.One_Sec_Timer_ReadControlRegister
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .text.One_Sec_Timer_WriteControlRegister
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .text.One_Sec_Timer_ReadPeriod
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .text.One_Sec_Timer_ReadCapture
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .text.One_Sec_Timer_ReadCounter
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .text.Debounce_Timer_SoftwareCapture
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .text.Debounce_Timer_ReadControlRegister
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .text.Debounce_Timer_WriteControlRegister
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .text.Debounce_Timer_ReadPeriod
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .text.Debounce_Timer_ReadCapture
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .text.Debounce_Timer_ReadCounter
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .text.ISR_Button_Timeout_Interrupt
+                0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .text.ISR_Button_Timeout_GetVector
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .text.ISR_Button_Timeout_GetPriority
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .text.ISR_Button_Timeout_GetState
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .text.ISR_Button_Timeout_Start
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .text.ISR_Button_Timeout_Stop
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .text.ISR_Button_Timeout_SetPending
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .text.ISR_Button_Timeout_ClearPending
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .text.EEPROM_Stop
+                0x00000000        0x8 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .text.EEPROM_UpdateTemperature
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .text.EEPROM_EraseSector
+                0x00000000       0x64 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .text.EEPROM_Write
+                0x00000000       0xb4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .text.EEPROM_StartWrite
+                0x00000000       0x88 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .text.EEPROM_StartErase
+                0x00000000       0x30 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .text.EEPROM_Query
+                0x00000000       0x40 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .text.EEPROM_ByteWritePos
+                0x00000000       0xc8 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyBootAsmGnu.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyBootAsmGnu.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .text.CyFlash_Start
+                0x00000000       0x54 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .text.CyFlash_Stop
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .text.CyFlash_EraseRow
+                0x00000000       0x78 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .text.CySetFlashEEBuffer
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .text.CyWriteRowFull
+                0x00000000       0xf8 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .text.CyWriteRowData
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .text.CyFlash_SetWaitCycles
+                0x00000000       0x7c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .text.CyEEPROM_Stop
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+ .text.CySpcStop
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+ .text.CySpcLoadRow
+                0x00000000       0x50 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+ .text.CySpcLoadRowFull
+                0x00000000       0x80 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+ .text.CySpcEraseSector
+                0x00000000       0x3c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+ .text.CySpcEraseRow
+                0x00000000       0x4c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x00000000        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
+ .text._sprintf_r
+                0x00000000       0x40 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .text.__ssprint_r
+                0x00000000       0xfe c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x00000000       0x1a c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x00000000       0xb4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00040000         xr
+ram              0x1fff8000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+START GROUP
+LOAD .\CortexM3\ARM_GCC_541\Debug\main.o
+LOAD .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+LOAD .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+LOAD .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+LOAD .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a
+LOAD C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc_nano.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc_nano.a
+END GROUP
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+START GROUP
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a
+LOAD c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libnosys.a
+END GROUP
+                0x00000000                CY_APPL_ORIGIN = 0x0
+                0x00000100                CY_FLASH_ROW_SIZE = 0x100
+                0x00000020                CY_ECC_ROW_SIZE = 0x20
+                0x00000000                CY_EE_IN_BTLDR = 0x0
+                0x00000000                CY_APPL_LOADABLE = 0x0
+                0x00000800                CY_EE_SIZE = 0x800
+                0x00000001                CY_APPL_NUM = 0x1
+                0x00000001                CY_APPL_MAX = 0x1
+                0x00000040                CY_METADATA_SIZE = 0x40
+                0x00000000                CY_APPL_LOADABLE = 0x0
+                0x00000000                CY_CHECKSUM_EXCLUDE_SIZE = ALIGN (0x0, CY_FLASH_ROW_SIZE)
+                [!provide]                PROVIDE (__cy_heap_start, _end)
+                0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
+                0x20008000                PROVIDE (__cy_stack, (ORIGIN (ram) + LENGTH (ram)))
+                [!provide]                PROVIDE (__cy_heap_end, (__cy_stack - 0x800))
+
+.cybootloader   0x00000000        0x0
+ *(.cybootloader)
+                0x00000000                appl1_start = CY_APPL_ORIGIN?CY_APPL_ORIGIN:ALIGN (CY_FLASH_ROW_SIZE)
+                0x0001ff00                appl2_start = (appl1_start + ALIGN ((((LENGTH (rom) - appl1_start) - (0x2 * CY_FLASH_ROW_SIZE)) / 0x2), CY_FLASH_ROW_SIZE))
+                0x00000000                appl_start = (CY_APPL_NUM == 0x1)?appl1_start:appl2_start
+                0x00000000                ecc_offset = ((appl_start / CY_FLASH_ROW_SIZE) * CY_ECC_ROW_SIZE)
+                0x00000000                ee_offset = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?((CY_EE_SIZE / CY_APPL_MAX) * (CY_APPL_NUM - 0x1)):0x0
+                0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
+                [!provide]                PROVIDE (CY_ECC_OFFSET, ecc_offset)
+
+.text           0x00000000     0x17d4
+ CREATE_OBJECT_SYMBOLS
+                0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
+ *(.romvectors)
+ .romvectors    0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000000                RomVectors
+                0x00000001                ASSERT ((. != __cy_interrupt_vector), No interrupt vector)
+                0x00000001                ASSERT (CY_APPL_ORIGIN?(SIZEOF (.cybootloader) <= CY_APPL_ORIGIN):0x1, Wrong image location)
+                0x00000010                PROVIDE (__cy_reset, Reset)
+ *(.text.Reset)
+ .text.Reset    0x00000010       0x18 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000010                Reset
+                0x00000001                ASSERT ((. != __cy_reset), No reset code)
+ *(.dma_init)
+                0x00000001                ASSERT ((((appl_start + .) <= 0x10000) || 0x1), DMA Init must be within the first 64k of flash)
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x00000028       0x5c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .text.One_Sec_Handler
+                0x00000084       0x30 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000084                One_Sec_Handler
+ .text.ActivateTarget
+                0x000000b4       0x58 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x000000b4                ActivateTarget
+ .text.Button_Timeout_Handler
+                0x0000010c       0x3c .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x0000010c                Button_Timeout_Handler
+ .text.getActiveTargetState
+                0x00000148       0x40 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000148                getActiveTargetState
+ .text.Init     0x00000188       0x38 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000188                Init
+ .text.main     0x000001c0      0x100 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x000001c0                main
+ .text.CyClockStartupError
+                0x000002c0        0x4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.cfg_write_bytes32
+                0x000002c4       0x34 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.AnalogSetDefault
+                0x000002f8       0x38 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.CYMEMZERO
+                0x00000330        0xc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.ClockSetup
+                0x0000033c       0xd0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.CYCONFIGCPY
+                0x0000040c        0x8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.cyfitter_cfg
+                0x00000414      0x134 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000414                cyfitter_cfg
+ .text.IntDefaultHandler
+                0x00000548       0x10 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000548                IntDefaultHandler
+ .text._sbrk    0x00000558       0x30 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000558                _sbrk
+ .text.Start_c  0x00000588       0x4c .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000588                Start_c
+ .text.initialize_psoc
+                0x000005d4       0x68 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x000005d4                initialize_psoc
+ .text.CyDelayUs
+                0x0000063c       0x14 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+                0x0000063c                CyDelayUs
+ .text.LED_Write
+                0x00000650       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+                0x00000650                LED_Write
+ .text.UART_BT_Init
+                0x00000668       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+                0x00000668                UART_BT_Init
+ .text.UART_BT_Enable
+                0x00000690       0x38 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+                0x00000690                UART_BT_Enable
+ .text.UART_BT_Start
+                0x000006c8       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+                0x000006c8                UART_BT_Start
+ .text.UART_BT_GetChar
+                0x000006e4       0x2c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+                0x000006e4                UART_BT_GetChar
+ .text.UART_BT_PutChar
+                0x00000710       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+                0x00000710                UART_BT_PutChar
+ .text.UART_BT_PutString
+                0x00000728       0x24 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+                0x00000728                UART_BT_PutString
+ .text.UART_BT_IntClock_Start
+                0x0000074c       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+                0x0000074c                UART_BT_IntClock_Start
+ .text.Target_BTN_1_Read
+                0x00000768       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+                0x00000768                Target_BTN_1_Read
+ .text.Target_LED_1_Write
+                0x00000778       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+                0x00000778                Target_LED_1_Write
+ .text.Target_BTN_2_Read
+                0x00000790       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+                0x00000790                Target_BTN_2_Read
+ .text.Target_LED_2_Write
+                0x000007a0       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+                0x000007a0                Target_LED_2_Write
+ .text.Target_BTN_3_Read
+                0x000007b8       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+                0x000007b8                Target_BTN_3_Read
+ .text.Target_LED_3_Write
+                0x000007c8       0x18 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+                0x000007c8                Target_LED_3_Write
+ .text.ISR_One_Sec_SetVector
+                0x000007e0       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+                0x000007e0                ISR_One_Sec_SetVector
+ .text.ISR_One_Sec_SetPriority
+                0x000007f0       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+                0x000007f0                ISR_One_Sec_SetPriority
+ .text.ISR_One_Sec_Enable
+                0x00000800       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+                0x00000800                ISR_One_Sec_Enable
+ .text.ISR_One_Sec_Disable
+                0x00000810       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+                0x00000810                ISR_One_Sec_Disable
+ .text.ISR_One_Sec_StartEx
+                0x00000820       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+                0x00000820                ISR_One_Sec_StartEx
+ .text.One_Sec_Timer_Enable
+                0x0000083c       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+                0x0000083c                One_Sec_Timer_Enable
+ .text.One_Sec_Timer_Stop
+                0x00000864       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+                0x00000864                One_Sec_Timer_Stop
+ .text.One_Sec_Timer_SetInterruptMode
+                0x0000088c        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+                0x0000088c                One_Sec_Timer_SetInterruptMode
+ .text.One_Sec_Timer_ReadStatusRegister
+                0x00000898        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+                0x00000898                One_Sec_Timer_ReadStatusRegister
+ .text.One_Sec_Timer_WritePeriod
+                0x000008a4        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+                0x000008a4                One_Sec_Timer_WritePeriod
+ .text.One_Sec_Timer_WriteCounter
+                0x000008b0        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+                0x000008b0                One_Sec_Timer_WriteCounter
+ .text.One_Sec_Timer_Init
+                0x000008bc       0x68 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+                0x000008bc                One_Sec_Timer_Init
+ .text.One_Sec_Timer_Start
+                0x00000924       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+                0x00000924                One_Sec_Timer_Start
+ .text.Debounce_Timer_Enable
+                0x00000940       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+                0x00000940                Debounce_Timer_Enable
+ .text.Debounce_Timer_Stop
+                0x00000968       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+                0x00000968                Debounce_Timer_Stop
+ .text.Debounce_Timer_SetInterruptMode
+                0x00000990        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+                0x00000990                Debounce_Timer_SetInterruptMode
+ .text.Debounce_Timer_ReadStatusRegister
+                0x0000099c        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+                0x0000099c                Debounce_Timer_ReadStatusRegister
+ .text.Debounce_Timer_WritePeriod
+                0x000009a8        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+                0x000009a8                Debounce_Timer_WritePeriod
+ .text.Debounce_Timer_WriteCounter
+                0x000009b4        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+                0x000009b4                Debounce_Timer_WriteCounter
+ .text.Debounce_Timer_Init
+                0x000009c0       0x64 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+                0x000009c0                Debounce_Timer_Init
+ .text.Debounce_Timer_Start
+                0x00000a24       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+                0x00000a24                Debounce_Timer_Start
+ .text.ISR_Button_Timeout_SetVector
+                0x00000a40       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+                0x00000a40                ISR_Button_Timeout_SetVector
+ .text.ISR_Button_Timeout_SetPriority
+                0x00000a50       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+                0x00000a50                ISR_Button_Timeout_SetPriority
+ .text.ISR_Button_Timeout_Enable
+                0x00000a60       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+                0x00000a60                ISR_Button_Timeout_Enable
+ .text.ISR_Button_Timeout_Disable
+                0x00000a70       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+                0x00000a70                ISR_Button_Timeout_Disable
+ .text.ISR_Button_Timeout_StartEx
+                0x00000a80       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+                0x00000a80                ISR_Button_Timeout_StartEx
+ .text.EEPROM_Enable
+                0x00000a9c        0xc .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+                0x00000a9c                EEPROM_Enable
+ .text.EEPROM_Start
+                0x00000aa8        0x8 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+                0x00000aa8                EEPROM_Start
+ .text.EEPROM_WriteByte
+                0x00000ab0       0xd0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+                0x00000ab0                EEPROM_WriteByte
+ .text.EEPROM_ReadByte
+                0x00000b80       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+                0x00000b80                EEPROM_ReadByte
+ .text          0x00000ba8       0x20 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyBootAsmGnu.o)
+                0x00000ba8                CyDelayCycles
+                0x00000bb8                CyEnterCriticalSection
+                0x00000bc0                CyExitCriticalSection
+ .text.CySetTempInt
+                0x00000bc8       0x60 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .text.CyFlashGetSpcAlgorithm
+                0x00000c28       0x4c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+                0x00000c28                CyFlashGetSpcAlgorithm
+ .text.CySetTemp
+                0x00000c74       0x14 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+                0x00000c74                CySetTemp
+ .text.CyEEPROM_Start
+                0x00000c88       0x54 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+                0x00000c88                CyEEPROM_Start
+ .text.CyEEPROM_ReadReserve
+                0x00000cdc       0x1c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+                0x00000cdc                CyEEPROM_ReadReserve
+ .text.CyEEPROM_ReadRelease
+                0x00000cf8       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+                0x00000cf8                CyEEPROM_ReadRelease
+ .text.CySpcStart
+                0x00000d08       0x24 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+                0x00000d08                CySpcStart
+ .text.CySpcReadData
+                0x00000d2c       0x34 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+                0x00000d2c                CySpcReadData
+ .text.CySpcLoadMultiByte
+                0x00000d60       0x78 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+                0x00000d60                CySpcLoadMultiByte
+ .text.CySpcWriteRow
+                0x00000dd8       0x4c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+                0x00000dd8                CySpcWriteRow
+ .text.CySpcGetTemp
+                0x00000e24       0x3c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+                0x00000e24                CySpcGetTemp
+ .text.CySpcLock
+                0x00000e60       0x4c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+                0x00000e60                CySpcLock
+ .text.CySpcUnlock
+                0x00000eac       0x38 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+                0x00000eac                CySpcUnlock
+ .text.CySpcGetAlgorithm
+                0x00000ee4       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+                0x00000ee4                CySpcGetAlgorithm
+ .text.__errno  0x00000f0c        0xc c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x00000f0c                __errno
+ .text.__libc_init_array
+                0x00000f18       0x4c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x00000f18                __libc_init_array
+ .text.memcpy   0x00000f64       0x16 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x00000f64                memcpy
+ .text.memset   0x00000f7a       0x10 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x00000f7a                memset
+ *fill*         0x00000f8a        0x2 
+ .text.sprintf  0x00000f8c       0x48 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
+                0x00000f8c                siprintf
+                0x00000f8c                sprintf
+ .text.__ssputs_r
+                0x00000fd4       0xb2 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x00000fd4                __ssputs_r
+ *fill*         0x00001086        0x2 
+ .text._svfprintf_r
+                0x00001088      0x1e8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x00001088                _svfiprintf_r
+                0x00001088                _svfprintf_r
+ .text._printf_common
+                0x00001270       0xec c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00001270                _printf_common
+ .text._printf_i
+                0x0000135c      0x24c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000135c                _printf_i
+ .text.memchr   0x000015a8       0x1c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+                0x000015a8                memchr
+ .text.memmove  0x000015c4       0x36 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+                0x000015c4                memmove
+ *fill*         0x000015fa        0x2 
+ .text._free_r  0x000015fc       0x98 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+                0x000015fc                _free_r
+ .text._malloc_r
+                0x00001694       0xbc c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x00001694                _malloc_r
+ .text._realloc_r
+                0x00001750       0x4c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+                0x00001750                _realloc_r
+ .text._sbrk_r  0x0000179c       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+                0x0000179c                _sbrk_r
+ .text.__malloc_lock
+                0x000017bc        0x2 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+                0x000017bc                __malloc_lock
+ .text.__malloc_unlock
+                0x000017be        0x2 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+                0x000017be                __malloc_unlock
+ .text._malloc_usable_size_r
+                0x000017c0       0x14 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+                0x000017c0                _malloc_usable_size_r
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x000017d4        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x000017d4        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x000017d4        0x0 linker stubs
+ *(.bootloader)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.gcc_except_table)
+
+.v4_bx          0x000017d4        0x0
+ .v4_bx         0x000017d4        0x0 linker stubs
+
+.iplt           0x000017d4        0x0
+ .iplt          0x000017d4        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x000017d4        0x4
+ *(.eh_frame)
+ .eh_frame      0x000017d4        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .eh_frame      0x000017d4        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+                [!provide]                PROVIDE (__exidx_start, .)
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x000017d8                __exidx_end = .
+
+.rodata         0x000017d8      0x118
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x000017d8       0x58 .\CortexM3\ARM_GCC_541\Debug\main.o
+                                 0x55 (size before relaxing)
+ .rodata        0x00001830       0x50 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .rodata.str1.1
+                0x00001880        0x2 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .rodata.str1.1
+                0x00001882       0x11 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .rodata.str1.1
+                0x00001893       0x22 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000018b8                . = ALIGN (0x4)
+ *fill*         0x000018b5        0x3 
+ *(.init)
+ .init          0x000018b8        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x000018b8                _init
+ .init          0x000018bc        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x000018c4                . = ALIGN (0x4)
+                0x000018c4                __preinit_array_start = .
+ *(.preinit_array)
+                0x000018c4                __preinit_array_end = .
+                0x000018c4                . = ALIGN (0x4)
+                0x000018c4                __init_array_start = .
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x000018c4        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .init_array    0x000018c8        0x4 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x000018cc                __init_array_end = .
+                0x000018cc                . = ALIGN (0x4)
+ *(.fini)
+ .fini          0x000018cc        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x000018cc                _fini
+ .fini          0x000018d0        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x000018d8                . = ALIGN (0x4)
+                0x000018d8                __fini_array_start = .
+ *(.fini_array)
+ .fini_array    0x000018d8        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x000018dc                __fini_array_end = .
+                0x000018dc                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+                0x000018dc                . = ALIGN (0x4)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+                0x000018dc                . = ALIGN (0x4)
+                0x000018dc                __cy_regions = .
+                0x000018dc        0x4 LONG 0x18f0 __cy_region_init_ram
+                0x000018e0        0x4 LONG 0x1fff80c8 __cy_region_start_data
+                0x000018e4        0x4 LONG 0x80 __cy_region_init_size_ram
+                0x000018e8        0x4 LONG 0x50 __cy_region_zero_size_ram
+                0x000018ec                __cy_regions_end = .
+                0x000018f0                . = ALIGN (0x8)
+ *fill*         0x000018ec        0x4 
+                0x000018f0                _etext = .
+
+.cy_checksum_exclude
+                0x000018f0        0x0
+ *(.cy_checksum_exclude)
+
+.ramvectors     0x1fff8000       0xc0
+                0x1fff8000                __cy_region_start_ram = .
+ *(.ramvectors)
+ .ramvectors    0x1fff8000       0xc0 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x1fff8000                CyRamVectors
+
+.noinit         0x1fff80c0        0x1
+ *(.noinit)
+ .noinit        0x1fff80c0        0x1 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+                0x1fff80c0                CyResetStatus
+
+.data           0x1fff80c8       0x80 load address 0x000018f0
+                0x1fff80c8                __cy_region_start_data = .
+ *(.jcr)
+ .jcr           0x1fff80c8        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .jcr           0x1fff80c8        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x1fff80cc        0x4 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x1fff80cc                active_target
+ .data          0x1fff80d0        0x4 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .data          0x1fff80d4       0x10 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+                0x1fff80d4                cydelay_32k_ms
+                0x1fff80d8                cydelay_freq_khz
+                0x1fff80dc                cydelay_freq_mhz
+                0x1fff80e0                cydelay_freq_hz
+ .data.impure_data
+                0x1fff80e4       0x60 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x1fff8144        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x1fff8144                _impure_ptr
+                0x1fff8148                . = ALIGN (0x8)
+ *(.ram)
+                0x1fff8148                _edata = .
+
+.igot.plt       0x1fff8148        0x0 load address 0x00001970
+ .igot.plt      0x1fff8148        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+
+.bss            0x1fff8148       0x50 load address 0x00001970
+                0x1fff8148                PROVIDE (__bss_start__, .)
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x1fff8148       0x1c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .bss           0x1fff8164       0x10 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x1fff8164                time
+                0x1fff8168                points
+                0x1fff816c                timeout_flag
+                0x1fff8170                finished
+ .bss           0x1fff8174        0x2 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+                0x1fff8174                UART_BT_initVar
+ .bss           0x1fff8176        0x1 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+                0x1fff8176                One_Sec_Timer_initVar
+ .bss           0x1fff8177        0x1 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+                0x1fff8177                Debounce_Timer_initVar
+ .bss           0x1fff8178        0x8 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+                0x1fff8178                SpcLockState
+ .bss.__malloc_sbrk_start
+                0x1fff8180        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x1fff8180                __malloc_sbrk_start
+ .bss.__malloc_free_list
+                0x1fff8184        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x1fff8184                __malloc_free_list
+ *(COMMON)
+ COMMON         0x1fff8188        0x4 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x1fff8188                state
+ COMMON         0x1fff818c        0x2 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+                0x1fff818c                dieTemperature
+ *fill*         0x1fff818e        0x2 
+ COMMON         0x1fff8190        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+                0x1fff8190                errno
+                0x1fff8198                . = ALIGN (0x8)
+ *fill*         0x1fff8194        0x4 
+ *(.ram.b)
+                0x1fff8198                _end = .
+                0x1fff8198                __end = .
+                0x1fff8198                PROVIDE (end, .)
+                0x1fff8198                PROVIDE (__bss_end__, .)
+                0x000018f0                __cy_region_init_ram = LOADADDR (.data)
+                0x00000080                __cy_region_init_size_ram = (_edata - ADDR (.data))
+                0x00000050                __cy_region_zero_size_ram = (_end - _edata)
+
+.heap           0x1fff8198       0x80 load address 0x00001970
+                0x1fff8198                . = _end
+                0x1fff8218                . = (. + 0x80)
+ *fill*         0x1fff8198       0x80 
+                0x1fff8218                __cy_heap_limit = .
+
+.stack          0x20007800      0x800
+                0x20007800                __cy_stack_limit = .
+                0x20008000                . = (. + 0x800)
+ *fill*         0x20007800      0x800 
+                0x00000001                ASSERT ((__cy_stack_limit >= __cy_heap_limit), region RAM overflowed with stack)
+                0x00000000                cy_checksum_exclude_size = (CY_APPL_LOADABLE == 0x1)?SIZEOF (.cy_checksum_exclude):0x0
+                0x00000001                ASSERT ((cy_checksum_exclude_size <= CY_CHECKSUM_EXCLUDE_SIZE), CY_BOOT: Section .cy_checksum_exclude size exceedes specified limit.)
+
+.cyloadermeta
+ *(.cyloadermeta)
+
+.cyloadablemeta
+ *(.cyloadablemeta)
+
+.cyconfigecc    0x80000000      0x364
+ *(.cyconfigecc)
+ .cyconfigecc   0x80000000      0x364 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x80000000                cy_meta_configecc
+
+.cycustnvl      0x90000000        0x4
+ *(.cycustnvl)
+ .cycustnvl     0x90000000        0x4 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x90000000                cy_meta_custnvl
+
+.cywolatch      0x90100000        0x4
+ *(.cywolatch)
+ .cywolatch     0x90100000        0x4 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x90100000                cy_meta_wonvl
+
+.cyeeprom       0x90200000        0x0
+ *(.cyeeprom)
+                0x00000001                ASSERT ((. <= ((0x90200000 + ee_offset) + ee_size)), .cyeeprom data will not fit in EEPROM)
+
+.cyflashprotect
+                0x90400000      0x100
+ *(.cyflashprotect)
+ .cyflashprotect
+                0x90400000      0x100 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x90400000                cy_meta_flashprotect
+
+.cymeta         0x90500000        0xc
+ *(.cymeta)
+ .cymeta        0x90500000        0xc .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x90500000                cy_metadata
+
+.rel.dyn        0x00001970        0x0 load address 0x9050000c
+ .rel.iplt      0x00001970        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0xad0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x48 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_aranges
+                0x00000048       0x58 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_aranges
+                0x000000a0       0x18 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_aranges
+                0x000000b8       0x48 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_aranges
+                0x00000100      0x2a0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .debug_aranges
+                0x000003a0       0x98 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .debug_aranges
+                0x00000438       0x38 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .debug_aranges
+                0x00000470       0xf0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .debug_aranges
+                0x00000560       0x70 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .debug_aranges
+                0x000005d0       0x38 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .debug_aranges
+                0x00000608       0x38 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .debug_aranges
+                0x00000640       0x38 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .debug_aranges
+                0x00000678       0x38 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .debug_aranges
+                0x000006b0       0x38 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .debug_aranges
+                0x000006e8       0x38 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .debug_aranges
+                0x00000720       0x80 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .debug_aranges
+                0x000007a0       0x88 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .debug_aranges
+                0x00000828       0x88 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .debug_aranges
+                0x000008b0       0x80 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .debug_aranges
+                0x00000930       0x78 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .debug_aranges
+                0x000009a8       0x20 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyBootAsmGnu.o)
+ .debug_aranges
+                0x000009c8       0x88 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .debug_aranges
+                0x00000a50       0x80 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x5c27
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x601 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_info    0x00000601      0x5f2 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_info    0x00000bf3      0x135 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x00000d28      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_info    0x000010e3     0x1374 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .debug_info    0x00002457      0xa2a .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .debug_info    0x00002e81      0x11f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .debug_info    0x00002fa0      0x60c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .debug_info    0x000035ac      0x283 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .debug_info    0x0000382f      0x11f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .debug_info    0x0000394e      0x11f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .debug_info    0x00003a6d      0x11f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .debug_info    0x00003b8c      0x11f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .debug_info    0x00003cab      0x11f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .debug_info    0x00003dca      0x11f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .debug_info    0x00003ee9      0x2d2 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .debug_info    0x000041bb      0x295 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .debug_info    0x00004450      0x293 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .debug_info    0x000046e3      0x2d2 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .debug_info    0x000049b5      0x630 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .debug_info    0x00004fe5       0xa5 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyBootAsmGnu.o)
+ .debug_info    0x0000508a      0x64d .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .debug_info    0x000056d7      0x550 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+
+.debug_abbrev   0x00000000     0x1a04
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x155 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_abbrev  0x00000155      0x20d .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_abbrev  0x00000362       0x66 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_abbrev  0x000003c8      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_abbrev  0x000005b0      0x254 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .debug_abbrev  0x00000804      0x1ab .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .debug_abbrev  0x000009af       0x90 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .debug_abbrev  0x00000a3f      0x175 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .debug_abbrev  0x00000bb4      0x139 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .debug_abbrev  0x00000ced       0x90 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .debug_abbrev  0x00000d7d       0x90 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .debug_abbrev  0x00000e0d       0x90 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .debug_abbrev  0x00000e9d       0x90 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .debug_abbrev  0x00000f2d       0x90 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .debug_abbrev  0x00000fbd       0x90 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .debug_abbrev  0x0000104d      0x173 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .debug_abbrev  0x000011c0      0x11a .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .debug_abbrev  0x000012da      0x11a .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .debug_abbrev  0x000013f4      0x173 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .debug_abbrev  0x00001567      0x14e .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .debug_abbrev  0x000016b5       0x14 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x000016c9      0x1a7 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .debug_abbrev  0x00001870      0x194 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+
+.debug_line     0x00000000     0x2919
+ *(.debug_line)
+ .debug_line    0x00000000      0x352 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_line    0x00000352      0x1fc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x0000054e      0x141 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x0000068f      0x234 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_line    0x000008c3      0x816 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .debug_line    0x000010d9      0x367 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .debug_line    0x00001440       0x90 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .debug_line    0x000014d0      0x2c2 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .debug_line    0x00001792      0x17f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .debug_line    0x00001911       0x99 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .debug_line    0x000019aa       0x99 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .debug_line    0x00001a43       0x99 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .debug_line    0x00001adc       0x99 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .debug_line    0x00001b75       0x99 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .debug_line    0x00001c0e       0x99 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .debug_line    0x00001ca7      0x138 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .debug_line    0x00001ddf      0x15b .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .debug_line    0x00001f3a      0x15c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .debug_line    0x00002096      0x13f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .debug_line    0x000021d5      0x264 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .debug_line    0x00002439       0x66 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyBootAsmGnu.o)
+ .debug_line    0x0000249f      0x21a .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .debug_line    0x000026b9      0x260 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+
+.debug_frame    0x00000000     0x1d70
+ *(.debug_frame)
+ .debug_frame   0x00000000       0xb8 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_frame   0x000000b8       0xe4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_frame   0x0000019c       0xb8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_frame   0x00000254      0x738 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .debug_frame   0x0000098c      0x1f8 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .debug_frame   0x00000b84       0x50 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .debug_frame   0x00000bd4      0x250 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .debug_frame   0x00000e24       0xe0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .debug_frame   0x00000f04       0x50 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .debug_frame   0x00000f54       0x50 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .debug_frame   0x00000fa4       0x50 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .debug_frame   0x00000ff4       0x50 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .debug_frame   0x00001044       0x50 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .debug_frame   0x00001094       0x50 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .debug_frame   0x000010e4      0x104 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .debug_frame   0x000011e8      0x108 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .debug_frame   0x000012f0      0x108 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .debug_frame   0x000013f8      0x104 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .debug_frame   0x000014fc      0x17c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .debug_frame   0x00001678      0x194 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .debug_frame   0x0000180c      0x180 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+ .debug_frame   0x0000198c       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x000019ac       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x000019d4       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00001a00       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00001a28       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00001a48       0x70 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x00001ab8       0x90 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x00001b48       0x60 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x00001ba8       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x00001bd0       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+ .debug_frame   0x00001bf8       0x38 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00001c30       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00001c5c       0x3c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00001c98       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x00001cc4       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x00001cf4       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x00001d14       0x5c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+
+.debug_str      0x00000000     0x22f6
+ *(.debug_str)
+ .debug_str     0x00000000      0x3c1 .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x422 (size before relaxing)
+ .debug_str     0x000003c1      0x1bc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                                0x359 (size before relaxing)
+ .debug_str     0x0000057d       0x7f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                                0x1f9 (size before relaxing)
+ .debug_str     0x000005fc      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                                0x31f (size before relaxing)
+ .debug_str     0x00000740      0x84e .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+                                0xa5c (size before relaxing)
+ .debug_str     0x00000f8e      0x365 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+                                0x748 (size before relaxing)
+ .debug_str     0x000012f3       0x52 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+                                0x1ed (size before relaxing)
+ .debug_str     0x00001345      0x2d4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+                                0x4e7 (size before relaxing)
+ .debug_str     0x00001619      0x1a1 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+                                0x36f (size before relaxing)
+ .debug_str     0x000017ba       0x6c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+                                0x21a (size before relaxing)
+ .debug_str     0x00001826       0x6b .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+                                0x21a (size before relaxing)
+ .debug_str     0x00001891       0x6c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+                                0x21a (size before relaxing)
+ .debug_str     0x000018fd       0x6b .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+                                0x21a (size before relaxing)
+ .debug_str     0x00001968       0x6c .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+                                0x21a (size before relaxing)
+ .debug_str     0x000019d4       0x6b .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+                                0x21a (size before relaxing)
+ .debug_str     0x00001a3f      0x126 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+                                0x30f (size before relaxing)
+ .debug_str     0x00001b65      0x17f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+                                0x38a (size before relaxing)
+ .debug_str     0x00001ce4      0x162 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+                                0x39a (size before relaxing)
+ .debug_str     0x00001e46      0x181 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+                                0x371 (size before relaxing)
+ .debug_str     0x00001fc7      0x1a7 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+                                0x3d7 (size before relaxing)
+ .debug_str     0x0000216e      0x11a .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+                                0x3d5 (size before relaxing)
+ .debug_str     0x00002288       0x6e .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+                                0x34d (size before relaxing)
+
+.debug_loc      0x00000000     0x25b9
+ *(.debug_loc)
+ .debug_loc     0x00000000       0xa7 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_loc     0x000000a7      0x289 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_loc     0x00000330      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_loc     0x00000474      0xa11 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .debug_loc     0x00000e85      0x1e4 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .debug_loc     0x00001069       0x42 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .debug_loc     0x000010ab      0x258 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .debug_loc     0x00001303      0x128 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .debug_loc     0x0000142b       0x42 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .debug_loc     0x0000146d       0x42 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .debug_loc     0x000014af       0x42 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .debug_loc     0x000014f1       0x42 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .debug_loc     0x00001533       0x42 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .debug_loc     0x00001575       0x42 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .debug_loc     0x000015b7       0x56 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .debug_loc     0x0000160d       0x56 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .debug_loc     0x00001663      0x49f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .debug_loc     0x00001b02      0x3b2 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .debug_loc     0x00001eb4      0x705 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges   0x00000000      0x948
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x38 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_ranges  0x00000038       0x48 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_ranges  0x00000080       0x38 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_ranges  0x000000b8      0x290 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .debug_ranges  0x00000348       0x88 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .debug_ranges  0x000003d0       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .debug_ranges  0x000003f8       0xe0 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .debug_ranges  0x000004d8       0x60 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .debug_ranges  0x00000538       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .debug_ranges  0x00000560       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .debug_ranges  0x00000588       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .debug_ranges  0x000005b0       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .debug_ranges  0x000005d8       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .debug_ranges  0x00000600       0x28 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .debug_ranges  0x00000628       0x70 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .debug_ranges  0x00000698       0x78 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .debug_ranges  0x00000710       0x78 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .debug_ranges  0x00000788       0x70 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .debug_ranges  0x000007f8       0x68 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .debug_ranges  0x00000860       0x78 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .debug_ranges  0x000008d8       0x70 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+
+.comment        0x00000000       0x6e
+ .comment       0x00000000       0x6e .\CortexM3\ARM_GCC_541\Debug\main.o
+                                 0x6f (size before relaxing)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x29
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+ .ARM.attributes
+                0x0000001d       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .ARM.attributes
+                0x0000004a       0x1b c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .ARM.attributes
+                0x00000065       0x33 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .ARM.attributes
+                0x00000098       0x33 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .ARM.attributes
+                0x000000cb       0x33 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .ARM.attributes
+                0x000000fe       0x33 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .ARM.attributes
+                0x00000131       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyLib.o)
+ .ARM.attributes
+                0x00000164       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(cyPm.o)
+ .ARM.attributes
+                0x00000197       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(LED.o)
+ .ARM.attributes
+                0x000001ca       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT.o)
+ .ARM.attributes
+                0x000001fd       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(UART_BT_IntClock.o)
+ .ARM.attributes
+                0x00000230       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_1.o)
+ .ARM.attributes
+                0x00000263       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_1.o)
+ .ARM.attributes
+                0x00000296       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_2.o)
+ .ARM.attributes
+                0x000002c9       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_2.o)
+ .ARM.attributes
+                0x000002fc       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_BTN_3.o)
+ .ARM.attributes
+                0x0000032f       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Target_LED_3.o)
+ .ARM.attributes
+                0x00000362       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_One_Sec.o)
+ .ARM.attributes
+                0x00000395       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(One_Sec_Timer.o)
+ .ARM.attributes
+                0x000003c8       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(Debounce_Timer.o)
+ .ARM.attributes
+                0x000003fb       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(ISR_Button_Timeout.o)
+ .ARM.attributes
+                0x0000042e       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(EEPROM.o)
+ .ARM.attributes
+                0x00000461       0x21 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyBootAsmGnu.o)
+ .ARM.attributes
+                0x00000482       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CyFlash.o)
+ .ARM.attributes
+                0x000004b5       0x33 .\CortexM3\ARM_GCC_541\Debug\ShootingGame.a(CySpc.o)
+ .ARM.attributes
+                0x000004e8       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .ARM.attributes
+                0x00000515       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000542       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000056f       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000059c       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x000005c9       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000005f6       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
+ .ARM.attributes
+                0x00000623       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .ARM.attributes
+                0x00000650       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .ARM.attributes
+                0x0000067d       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+ .ARM.attributes
+                0x000006aa       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x000006d7       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+ .ARM.attributes
+                0x00000704       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .ARM.attributes
+                0x00000731       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .ARM.attributes
+                0x0000075e       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x0000078b       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x000007b8       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+ .ARM.attributes
+                0x000007e5       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+ .ARM.attributes
+                0x00000812       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .ARM.attributes
+                0x0000083f       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(C:\Users\koppany\Documents\uC\Shooting_Game\ShootingGame.cydsn\CortexM3\ARM_GCC_541\Debug\ShootingGame.elf elf32-littlearm)
